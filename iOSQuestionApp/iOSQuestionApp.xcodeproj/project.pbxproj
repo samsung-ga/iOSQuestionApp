@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF71BE30281BB4AC001AA251 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71BE2F281BB4AC001AA251 /* Temp.swift */; };
+		EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71BE32281BB4BA001AA251 /* UIView+.swift */; };
 		EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */; };
 		EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */; };
 		EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70272281BAFAB004EBA53 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF71BE2F281BB4AC001AA251 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		EF71BE32281BB4BA001AA251 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		EFD7026B281BAFAB004EBA53 /* iOSQuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSQuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF71BE31281BB4B2001AA251 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EF71BE32281BB4BA001AA251 /* UIView+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EFD70262281BAFAB004EBA53 = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +68,41 @@
 		EFD7026D281BAFAB004EBA53 /* iOSQuestionApp */ = {
 			isa = PBXGroup;
 			children = (
-				EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */,
-				EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */,
-				EFD70272281BAFAB004EBA53 /* ViewController.swift */,
-				EFD70274281BAFAB004EBA53 /* Main.storyboard */,
-				EFD70277281BAFAE004EBA53 /* Assets.xcassets */,
-				EFD70279281BAFAE004EBA53 /* LaunchScreen.storyboard */,
-				EFD7027C281BAFAE004EBA53 /* Info.plist */,
+				EFD70287281BB37A004EBA53 /* Global */,
+				EFD70286281BB370004EBA53 /* UI */,
+				EFD70283281BB2D7004EBA53 /* Resource */,
 			);
 			path = iOSQuestionApp;
+			sourceTree = "<group>";
+		};
+		EFD70283281BB2D7004EBA53 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				EFD70279281BAFAE004EBA53 /* LaunchScreen.storyboard */,
+				EFD7027C281BAFAE004EBA53 /* Info.plist */,
+				EFD70277281BAFAE004EBA53 /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		EFD70286281BB370004EBA53 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EFD70274281BAFAB004EBA53 /* Main.storyboard */,
+				EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */,
+				EFD70272281BAFAB004EBA53 /* ViewController.swift */,
+				EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		EFD70287281BB37A004EBA53 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				EF71BE2F281BB4AC001AA251 /* Temp.swift */,
+				EF71BE31281BB4B2001AA251 /* Extensions */,
+			);
+			path = Global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +179,8 @@
 				EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */,
 				EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */,
 				EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */,
+				EF71BE30281BB4AC001AA251 /* Temp.swift in Sources */,
+				EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,7 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iOSQuestionApp/Info.plist;
+				INFOPLIST_FILE = iOSQuestionApp/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +355,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = iOSQuestionApp/Info.plist;
+				INFOPLIST_FILE = iOSQuestionApp/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
