@@ -11,6 +11,11 @@
 		EF71BE35281BB506001AA251 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF71BE34281BB506001AA251 /* Colors.xcassets */; };
 		EF71BE3D281BBA9F001AA251 /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71BE3C281BBA9F001AA251 /* Pallete.swift */; };
 		EF71BE3F281BDCEA001AA251 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71BE3E281BDCEA001AA251 /* ImageAsset.swift */; };
+		EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */; };
+		EFB2A077281F816100F4844C /* QuestionStatisticUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */; };
+		EFB2A079281F81C000F4844C /* AnswerNumberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */; };
+		EFB2A07E281F820A00F4844C /* QuestionListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A07D281F820A00F4844C /* QuestionListUseCase.swift */; };
+		EFB2A081281F825800F4844C /* WriteAnswerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A080281F825800F4844C /* WriteAnswerUseCase.swift */; };
 		EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */; };
 		EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */; };
 		EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70272281BAFAB004EBA53 /* ViewController.swift */; };
@@ -24,6 +29,11 @@
 		EF71BE34281BB506001AA251 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EF71BE3C281BBA9F001AA251 /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EF71BE3E281BDCEA001AA251 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerExistenceUseCase.swift; sourceTree = "<group>"; };
+		EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatisticUseCase.swift; sourceTree = "<group>"; };
+		EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerNumberUseCase.swift; sourceTree = "<group>"; };
+		EFB2A07D281F820A00F4844C /* QuestionListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListUseCase.swift; sourceTree = "<group>"; };
+		EFB2A080281F825800F4844C /* WriteAnswerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteAnswerUseCase.swift; sourceTree = "<group>"; };
 		EFD7026B281BAFAB004EBA53 /* iOSQuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSQuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +63,73 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		EFB2A071281F810500F4844C /* Domain Layer */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2A082281F828300F4844C /* Interface */,
+				EFB2A073281F812400F4844C /* UseCase */,
+			);
+			path = "Domain Layer";
+			sourceTree = "<group>";
+		};
+		EFB2A072281F811900F4844C /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data Layer";
+			sourceTree = "<group>";
+		};
+		EFB2A073281F812400F4844C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2A07B281F81DA00F4844C /* Common */,
+				EFB2A07A281F81D200F4844C /* Home */,
+				EFB2A07C281F81F400F4844C /* Question */,
+				EFB2A07F281F822800F4844C /* Answer */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		EFB2A07A281F81D200F4844C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EFB2A07B281F81DA00F4844C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EFB2A07C281F81F400F4844C /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */,
+				EFB2A07D281F820A00F4844C /* QuestionListUseCase.swift */,
+			);
+			path = Question;
+			sourceTree = "<group>";
+		};
+		EFB2A07F281F822800F4844C /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				EFB2A080281F825800F4844C /* WriteAnswerUseCase.swift */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		EFB2A082281F828300F4844C /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
 		EFD70262281BAFAB004EBA53 = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				EFD70287281BB37A004EBA53 /* Global */,
-				EFD70286281BB370004EBA53 /* UI */,
+				EFB2A071281F810500F4844C /* Domain Layer */,
+				EFD70286281BB370004EBA53 /* Presentation Layer */,
+				EFB2A072281F811900F4844C /* Data Layer */,
 				EFD70283281BB2D7004EBA53 /* Resource */,
 			);
 			path = iOSQuestionApp;
@@ -90,7 +169,7 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		EFD70286281BB370004EBA53 /* UI */ = {
+		EFD70286281BB370004EBA53 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
 				EFD70274281BAFAB004EBA53 /* Main.storyboard */,
@@ -98,7 +177,7 @@
 				EFD70272281BAFAB004EBA53 /* ViewController.swift */,
 				EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */,
 			);
-			path = UI;
+			path = "Presentation Layer";
 			sourceTree = "<group>";
 		};
 		EFD70287281BB37A004EBA53 /* Global */ = {
@@ -183,12 +262,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB2A079281F81C000F4844C /* AnswerNumberUseCase.swift in Sources */,
 				EF71BE3F281BDCEA001AA251 /* ImageAsset.swift in Sources */,
 				EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */,
 				EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */,
 				EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */,
 				EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */,
+				EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */,
 				EF71BE3D281BBA9F001AA251 /* Pallete.swift in Sources */,
+				EFB2A077281F816100F4844C /* QuestionStatisticUseCase.swift in Sources */,
+				EFB2A07E281F820A00F4844C /* QuestionListUseCase.swift in Sources */,
+				EFB2A081281F825800F4844C /* WriteAnswerUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
