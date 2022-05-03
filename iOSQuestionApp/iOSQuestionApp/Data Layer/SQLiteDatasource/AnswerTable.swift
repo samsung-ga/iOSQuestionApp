@@ -26,7 +26,7 @@ class AnswerTable: AnswerTableProtocol {
     let id = Expression<Int>("id")
     let questionID = Expression<Int>("questionID")
     let content = Expression<String>("content")
-    let date = Expression<Date>("date")
+    let date = Expression<String>("date")
     
     /// table 생성여부를 확인하여 생성되었다면 아무 작동 X, 생성되지 않았다면 작동 O
     func createTable() {

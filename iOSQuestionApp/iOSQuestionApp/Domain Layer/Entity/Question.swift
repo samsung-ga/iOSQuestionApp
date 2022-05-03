@@ -15,6 +15,10 @@ enum QuestionCategory: String {
     case Architecture
     case Programming
     case None
+    
+    static func changeToEnum(_ string: String) -> Self {
+        return .init(rawValue: string)!
+    }
 }
 
 struct Question: Hashable {
