@@ -22,6 +22,11 @@
 		EFB2A093281FB30D00F4844C /* AnswerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A092281FB30D00F4844C /* AnswerRepositoryProtocol.swift */; };
 		EFB2A095281FB31600F4844C /* QuestionRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A094281FB31600F4844C /* QuestionRepositoryProtocol.swift */; };
 		EFB2A097281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A096281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift */; };
+		EFBEFD632820A6A100E114D8 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = EFBEFD622820A6A100E114D8 /* SQLite */; };
+		EFBEFD652820A6B400E114D8 /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEFD642820A6B400E114D8 /* SQLiteDatabase.swift */; };
+		EFBEFD682820AB3700E114D8 /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEFD672820AB3700E114D8 /* QuestionTable.swift */; };
+		EFBEFD6A2820B55300E114D8 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEFD692820B55300E114D8 /* DatabaseError.swift */; };
+		EFBEFD6C2820B56B00E114D8 /* AnswerTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEFD6B2820B56B00E114D8 /* AnswerTable.swift */; };
 		EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */; };
 		EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */; };
 		EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70272281BAFAB004EBA53 /* ViewController.swift */; };
@@ -46,6 +51,10 @@
 		EFB2A092281FB30D00F4844C /* AnswerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRepositoryProtocol.swift; sourceTree = "<group>"; };
 		EFB2A094281FB31600F4844C /* QuestionRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepositoryProtocol.swift; sourceTree = "<group>"; };
 		EFB2A096281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAnsweredRepositoryProtocol.swift; sourceTree = "<group>"; };
+		EFBEFD642820A6B400E114D8 /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
+		EFBEFD672820AB3700E114D8 /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
+		EFBEFD692820B55300E114D8 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
+		EFBEFD6B2820B56B00E114D8 /* AnswerTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerTable.swift; sourceTree = "<group>"; };
 		EFD7026B281BAFAB004EBA53 /* iOSQuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSQuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFBEFD632820A6A100E114D8 /* SQLite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +98,7 @@
 		EFB2A072281F811900F4844C /* Data Layer */ = {
 			isa = PBXGroup;
 			children = (
+				EFBEFD5E2820A5FE00E114D8 /* SQLiteDatasource */,
 				EFB2A089281F842E00F4844C /* Question.swift */,
 				EFB2A08B281F852C00F4844C /* Answer.swift */,
 			);
@@ -172,6 +183,17 @@
 			path = Response;
 			sourceTree = "<group>";
 		};
+		EFBEFD5E2820A5FE00E114D8 /* SQLiteDatasource */ = {
+			isa = PBXGroup;
+			children = (
+				EFBEFD692820B55300E114D8 /* DatabaseError.swift */,
+				EFBEFD642820A6B400E114D8 /* SQLiteDatabase.swift */,
+				EFBEFD672820AB3700E114D8 /* QuestionTable.swift */,
+				EFBEFD6B2820B56B00E114D8 /* AnswerTable.swift */,
+			);
+			path = SQLiteDatasource;
+			sourceTree = "<group>";
+		};
 		EFD70262281BAFAB004EBA53 = {
 			isa = PBXGroup;
 			children = (
@@ -248,6 +270,9 @@
 			dependencies = (
 			);
 			name = iOSQuestionApp;
+			packageProductDependencies = (
+				EFBEFD622820A6A100E114D8 /* SQLite */,
+			);
 			productName = iOSQuestionApp;
 			productReference = EFD7026B281BAFAB004EBA53 /* iOSQuestionApp.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +301,9 @@
 				Base,
 			);
 			mainGroup = EFD70262281BAFAB004EBA53;
+			packageReferences = (
+				EFBEFD612820A6A100E114D8 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = EFD7026C281BAFAB004EBA53 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,8 +338,11 @@
 				EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */,
 				EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */,
 				EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */,
+				EFBEFD682820AB3700E114D8 /* QuestionTable.swift in Sources */,
 				EFB2A091281FB2C900F4844C /* Empty.swift in Sources */,
 				EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */,
+				EFBEFD6A2820B55300E114D8 /* DatabaseError.swift in Sources */,
+				EFBEFD652820A6B400E114D8 /* SQLiteDatabase.swift in Sources */,
 				EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */,
 				EFB2A08C281F852C00F4844C /* Answer.swift in Sources */,
 				EF71BE3D281BBA9F001AA251 /* Pallete.swift in Sources */,
@@ -321,6 +352,7 @@
 				EFB2A07E281F820A00F4844C /* QuestionListUseCase.swift in Sources */,
 				EFB2A093281FB30D00F4844C /* AnswerRepositoryProtocol.swift in Sources */,
 				EFB2A081281F825800F4844C /* WriteAnswerUseCase.swift in Sources */,
+				EFBEFD6C2820B56B00E114D8 /* AnswerTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -538,6 +570,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EFBEFD612820A6A100E114D8 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EFBEFD622820A6A100E114D8 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EFBEFD612820A6A100E114D8 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EFD70263281BAFAB004EBA53 /* Project object */;
 }

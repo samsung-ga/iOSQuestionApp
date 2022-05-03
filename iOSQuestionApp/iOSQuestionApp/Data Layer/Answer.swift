@@ -8,7 +8,8 @@
 import Foundation
 
 struct Answer: Hashable {
-    var id: UUID
+    var id: Int
+    var questionID: Int
     var content: String
-    var date: String
+    var date: Date
 }
