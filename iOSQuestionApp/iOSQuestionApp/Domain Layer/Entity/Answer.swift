@@ -11,9 +11,9 @@ struct Answer: Hashable {
     var id: Int
     var questionID: Int
     var content: String
-    var date: Date
+    var date: String
 }
 
 extension Answer {
-    static let Empty = Question(id: -1, content: "저장된 답변이 없습니다.", isAnswered: false)
+    static let Empty = Answer(id: -1, questionID: -1, content: "질문이 비었습니다.", date: "")
 }
