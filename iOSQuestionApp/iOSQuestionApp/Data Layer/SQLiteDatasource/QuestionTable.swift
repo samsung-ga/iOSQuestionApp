@@ -9,16 +9,16 @@ import Foundation
 
 import SQLite
 
-protocol QuestionTableCommandsProtocol {
+protocol QuestionTableProtocol {
     typealias QuestionList = [Question]
 
-    func createTable() -> Bool?
+    func createTable()
     func insertRow(_ question: Question) -> Bool?
     func updateRow(_ question: Question) -> Bool?
     func getRow() -> QuestionList?
 }
 
-class QuestionTable: QuestionTableCommandsProtocol {
+class QuestionTable: QuestionTableProtocol {
   
     typealias QuestionList = [Question]
 
@@ -27,9 +27,11 @@ class QuestionTable: QuestionTableCommandsProtocol {
     let content = Expression<String>("content")
     let isAnswered = Expression<Bool>("isAnswered")
     
-    func createTable() -> Bool? {
+    /// table 생성여부를 확인하여 생성되었다면 아무 작동 X, 생성되지 않았다면 작동 O
+    func createTable() {
         guard let database = SQLiteDatabase.shared.database else {
-            return false
+            print(DatabaseError.databaseConnectionError.description)
+            return
         }
         
         do {
@@ -38,9 +40,10 @@ class QuestionTable: QuestionTableCommandsProtocol {
                 table.column(content)
                 table.column(isAnswered)
             })
-            return true
+            
         } catch {
-            return false
+            // TODO: 오류 처리는 나중에 합시당
+            fatalError()
         }
     }
     

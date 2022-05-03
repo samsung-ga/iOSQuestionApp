@@ -13,3 +13,7 @@ struct Answer: Hashable {
     var content: String
     var date: Date
 }
+
+extension Answer {
+    static let Empty = Question(id: -1, content: "저장된 답변이 없습니다.", isAnswered: false)
+}

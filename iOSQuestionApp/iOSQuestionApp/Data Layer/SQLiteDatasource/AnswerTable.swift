@@ -9,16 +9,16 @@ import Foundation
 
 import SQLite
 
-protocol AnswerTableCommandsProtocol {
+protocol AnswerTableProtocol {
     typealias AnswerList = [Answer]
     
-    func createTable() -> Bool?
+    func createTable()
     func insertRow(_ answer: Answer) -> Bool?
     func updateRow(_ answer: Answer) -> Bool?
     func getRow() -> AnswerList?
 }
 
-class AnswerTable: AnswerTableCommandsProtocol {
+class AnswerTable: AnswerTableProtocol {
     
     typealias QuestionList = [Question]
     
@@ -28,10 +28,11 @@ class AnswerTable: AnswerTableCommandsProtocol {
     let content = Expression<String>("content")
     let date = Expression<Date>("date")
     
-    
-    func createTable() -> Bool? {
+    /// table 생성여부를 확인하여 생성되었다면 아무 작동 X, 생성되지 않았다면 작동 O
+    func createTable() {
         guard let database = SQLiteDatabase.shared.database else {
-            return false
+            print(DatabaseError.databaseConnectionError.description)
+            return
         }
         
         do {
@@ -41,9 +42,8 @@ class AnswerTable: AnswerTableCommandsProtocol {
                 table.column(content)
                 table.column(date)
             })
-            return true
         } catch {
-            return false
+            fatalError()
         }
     }
     

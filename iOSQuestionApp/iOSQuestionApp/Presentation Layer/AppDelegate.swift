@@ -14,6 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let _ = SQLiteDatabase.shared
+        if let creatingSuccess = QuestionTable().createTable() {
+            
+        }
+        
         return true
     }
 
