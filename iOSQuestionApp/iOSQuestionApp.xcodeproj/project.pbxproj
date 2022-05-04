@@ -18,7 +18,6 @@
 		EFB2A081281F825800F4844C /* WriteAnswerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A080281F825800F4844C /* WriteAnswerUseCase.swift */; };
 		EFB2A08A281F842E00F4844C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A089281F842E00F4844C /* Question.swift */; };
 		EFB2A08C281F852C00F4844C /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A08B281F852C00F4844C /* Answer.swift */; };
-		EFB2A091281FB2C900F4844C /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A090281FB2C900F4844C /* Empty.swift */; };
 		EFB2A093281FB30D00F4844C /* AnswerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A092281FB30D00F4844C /* AnswerRepositoryProtocol.swift */; };
 		EFB2A095281FB31600F4844C /* QuestionRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A094281FB31600F4844C /* QuestionRepositoryProtocol.swift */; };
 		EFB2A097281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A096281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift */; };
@@ -51,7 +50,6 @@
 		EFB2A080281F825800F4844C /* WriteAnswerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteAnswerUseCase.swift; sourceTree = "<group>"; };
 		EFB2A089281F842E00F4844C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		EFB2A08B281F852C00F4844C /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
-		EFB2A090281FB2C900F4844C /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		EFB2A092281FB30D00F4844C /* AnswerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRepositoryProtocol.swift; sourceTree = "<group>"; };
 		EFB2A094281FB31600F4844C /* QuestionRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepositoryProtocol.swift; sourceTree = "<group>"; };
 		EFB2A096281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAnsweredRepositoryProtocol.swift; sourceTree = "<group>"; };
@@ -108,8 +106,6 @@
 			children = (
 				EFBEFD712820BF2600E114D8 /* Repository */,
 				EFBEFD5E2820A5FE00E114D8 /* SQLiteDatasource */,
-				EFB2A089281F842E00F4844C /* Question.swift */,
-				EFB2A08B281F852C00F4844C /* Answer.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -171,25 +167,10 @@
 		EFB2A08D281F867400F4844C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				EFB2A08F281FB28700F4844C /* Response */,
-				EFB2A08E281FB28300F4844C /* Request */,
+				EFB2A089281F842E00F4844C /* Question.swift */,
+				EFB2A08B281F852C00F4844C /* Answer.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		EFB2A08E281FB28300F4844C /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				EFB2A090281FB2C900F4844C /* Empty.swift */,
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
-		EFB2A08F281FB28700F4844C /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		EFBEFD5E2820A5FE00E114D8 /* SQLiteDatasource */ = {
@@ -369,7 +350,6 @@
 				EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */,
 				EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */,
 				EFBEFD682820AB3700E114D8 /* QuestionTable.swift in Sources */,
-				EFB2A091281FB2C900F4844C /* Empty.swift in Sources */,
 				EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */,
 				EFBEFD6A2820B55300E114D8 /* DatabaseError.swift in Sources */,
 				EFBEFD652820A6B400E114D8 /* SQLiteDatabase.swift in Sources */,

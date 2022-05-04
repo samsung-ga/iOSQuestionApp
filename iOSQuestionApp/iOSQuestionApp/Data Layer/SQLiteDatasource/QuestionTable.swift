@@ -26,6 +26,7 @@ class QuestionTable: QuestionTableProtocol {
     let id = Expression<Int>("id")
     let content = Expression<String>("content")
     let isAnswered = Expression<Bool>("isAnswered")
+    let category = Expression<String>("category")
     
     /// table 생성여부를 확인하여 생성되었다면 아무 작동 X, 생성되지 않았다면 작동 O
     func createTable() {
@@ -39,6 +40,7 @@ class QuestionTable: QuestionTableProtocol {
                 table.column(id, primaryKey: true)
                 table.column(content)
                 table.column(isAnswered)
+                table.column(category)
             })
             
         } catch {
@@ -60,8 +62,9 @@ class QuestionTable: QuestionTableProtocol {
                 let id = questionTable[id]
                 let content = questionTable[content]
                 let isAnswered = questionTable[isAnswered]
-                
-                let question = Question(id: id, content: content, isAnswered: isAnswered)
+                let category = questionTable[category]
+
+                let question = Question(id: id, content: content, isAnswered: isAnswered, category: QuestionCategory.changeToEnum(category))
                 questionArray.append(question)
             }
         } catch {
@@ -109,6 +112,5 @@ class QuestionTable: QuestionTableProtocol {
             print(error)
             return false
         }
-        
     }
 }
