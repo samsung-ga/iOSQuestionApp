@@ -33,7 +33,7 @@ class QuestionTableViewCell: BaseTableViewCell {
     }
     
     func configure(with viewModel: QuestionCellViewModel) {
-        dateLabel.text = viewModel.answerDate
+        dateLabel.text = viewModel.answerDate.subStringDate()
         questionLabel.text = viewModel.question.content
         categoryLabel.text = viewModel.question.category.rawValue
         answerCountLabel.text = "\(viewModel.answerCount)"

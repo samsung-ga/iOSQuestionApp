@@ -18,10 +18,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WIM-6Q-azc">
-                        <rect key="frame" x="29" y="6" width="420" height="185"/>
+                        <rect key="frame" x="16" y="6" width="446" height="185"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urJ-6a-pQO">
-                                <rect key="frame" x="31" y="32.5" width="354" height="57.5"/>
+                                <rect key="frame" x="31" y="32.5" width="380" height="57.5"/>
                                 <string key="text">하나의 View Controller 코드에서 여러 
 TableView Controller 역할을 해야 할 경우 어떻게 구분해서 구현해야 하는지 설명하시오.</string>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
@@ -95,9 +95,9 @@ TableView Controller 역할을 해야 할 경우 어떻게 구분해서 구현�
                 <color key="backgroundColor" name="main"/>
                 <constraints>
                     <constraint firstItem="WIM-6Q-azc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="G7p-9U-L1g"/>
-                    <constraint firstItem="WIM-6Q-azc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="29" id="hQC-Ax-dDm"/>
+                    <constraint firstItem="WIM-6Q-azc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hQC-Ax-dDm"/>
                     <constraint firstAttribute="bottom" secondItem="WIM-6Q-azc" secondAttribute="bottom" constant="6" id="iJD-1M-ndI"/>
-                    <constraint firstAttribute="trailing" secondItem="WIM-6Q-azc" secondAttribute="trailing" constant="29" id="rOL-Ee-vlT"/>
+                    <constraint firstAttribute="trailing" secondItem="WIM-6Q-azc" secondAttribute="trailing" constant="16" id="rOL-Ee-vlT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

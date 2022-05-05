@@ -29,7 +29,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2s-Yb-mU2">
-                                                    <rect key="frame" x="29" y="6" width="356" height="108"/>
+                                                    <rect key="frame" x="16" y="6" width="382" height="108"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="og7-Qx-qTs">
                                                             <rect key="frame" x="20" y="25" width="0.0" height="58"/>
@@ -49,8 +49,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="P2s-Yb-mU2" secondAttribute="bottom" constant="6" id="MRW-gS-kQ0"/>
-                                                <constraint firstAttribute="trailing" secondItem="P2s-Yb-mU2" secondAttribute="trailing" constant="29" id="P6n-xE-hQ7"/>
-                                                <constraint firstItem="P2s-Yb-mU2" firstAttribute="leading" secondItem="d6a-V0-Igs" secondAttribute="leading" constant="29" id="PuU-1h-euH"/>
+                                                <constraint firstAttribute="trailing" secondItem="P2s-Yb-mU2" secondAttribute="trailing" constant="16" id="P6n-xE-hQ7"/>
+                                                <constraint firstItem="P2s-Yb-mU2" firstAttribute="leading" secondItem="d6a-V0-Igs" secondAttribute="leading" constant="16" id="PuU-1h-euH"/>
                                                 <constraint firstItem="P2s-Yb-mU2" firstAttribute="top" secondItem="d6a-V0-Igs" secondAttribute="top" constant="6" id="caq-FQ-Ifg"/>
                                             </constraints>
                                         </tableViewCellContentView>

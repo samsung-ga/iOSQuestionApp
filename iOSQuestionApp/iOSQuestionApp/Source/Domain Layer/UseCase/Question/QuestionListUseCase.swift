@@ -33,10 +33,12 @@ extension QuestionListUseCase {
         let questions = questionRepository.getQuestionsAnswered()
         questions.forEach {
             let answers = answerRepository.getAnswer(of: $0)
+            print(answers)
             let newestDate = compareDate(answers)
             answerCounts.append(answers.count)
             dateStrings.append(newestDate)
         }
+        print(dateStrings)
         questionList.send((questions, answerCounts, dateStrings))
     }
     

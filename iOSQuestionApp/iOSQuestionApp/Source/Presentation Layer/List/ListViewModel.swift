@@ -67,12 +67,20 @@ final class ListViewModel: BaseViewModel {
                                                      answerDate: dates[index])
                     questionInfo.append(temp)
                 }
-                self?.questionList = questionInfo
+                self?.questionList = self?.alignAnswerListByDate(questionInfo) ?? []
                 self?.tableViewReload.send(Void())
             }
             .store(in: &cancelBag)
         
         
+    }
+    
+    private func alignAnswerListByDate(_ questions: [QuestionCellViewModel]) -> [QuestionCellViewModel] {
+        return questions.sorted { first, second in
+            let firstDate = first.answerDate.convertStringToDate()
+            let secondDate = second.answerDate.convertStringToDate()
+            return firstDate - secondDate > 0
+        }
     }
     
     func getQuestionListModel(to indexPath: IndexPath) -> QuestionCellViewModel {

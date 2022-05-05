@@ -8,9 +8,11 @@
 import Foundation
 
 extension Date {
+    
     func convertDateToString() -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM월 dd일"
+        dateFormatter.locale = .init(identifier: "ko")
+        dateFormatter.dateFormat = "M월 dd일 a H:m:s"
         return dateFormatter.string(from: self)
     }
     

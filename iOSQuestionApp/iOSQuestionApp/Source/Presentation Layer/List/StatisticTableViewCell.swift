@@ -29,7 +29,7 @@ final class StatisticTableViewCell: BaseTableViewCell {
     }
     
     func configure(with cellViewModel: StatisticCellModel) {
-        answerCountLabel.text = "총 \(cellViewModel.answerCount)번 답변하셨네요!"
+        answerCountLabel.text = "총 \(cellViewModel.answerCount)개의 질문에 답변하셨네요!"
         swiftCountLabel.text = "\(cellViewModel.counts[.Swift] ?? 0)"
         iOSCountLabel.text = "\(cellViewModel.counts[.iOS] ?? 0)"
         swiftUICountLabel.text = "\(cellViewModel.counts[.SwiftUI] ?? 0)"

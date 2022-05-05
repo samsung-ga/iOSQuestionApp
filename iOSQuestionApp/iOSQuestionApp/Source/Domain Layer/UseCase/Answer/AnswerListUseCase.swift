@@ -23,9 +23,16 @@ final class AnswerListUseCase {
 extension AnswerListUseCase {
     
     func requestAnswerList(_ question: Question) {
-        let answers = answerRepository.getAnswer(of: question)
+        var answers = answerRepository.getAnswer(of: question)
+        answers = alignAnswers(answers)
         answerList.send(answers)
     }
     
-    // 정렬 ㅠㅠㅠ 이거 여기서 해줘야하냐 ㅠㅠ
+    private func alignAnswers(_ answers: AnswerList) -> AnswerList {
+        return answers.sorted { first, second in
+            let firstDate = first.date.convertStringToDate()
+            let secondDate = second.date.convertStringToDate()
+            return firstDate - secondDate > 0
+        }
+    }
 }
