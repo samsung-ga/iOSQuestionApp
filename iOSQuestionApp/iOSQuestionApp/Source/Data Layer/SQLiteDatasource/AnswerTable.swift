@@ -54,18 +54,18 @@ class AnswerTable: AnswerTableProtocol {
         }
         
         do {
-            try database.run(table.insert(id <- answer.id,
-                                          questionID <- answer.questionID,
+            // MARK: id 자동 생성
+            try database.run(table.insert(questionID <- answer.questionID,
                                           content <- answer.content,
                                           date <- answer.date))
             return true
         } catch let error {
-            // TODO: primary key 가 중복되서 나는 오류 따로 처리해주기
             print(error)
             return false
         }
     }
     
+    // MARK: 절대 쓰면 안 되는 메소드
     /// 절대 쓰면 안 되는 메소드
     func updateRow(_ answer: Answer) -> Bool? {
         return nil

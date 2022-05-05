@@ -9,6 +9,8 @@ import UIKit
 
 class WritingViewController: BaseViewController {
 
+    var viewModel: WritingViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObserver()
@@ -17,14 +19,54 @@ class WritingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         textView.becomeFirstResponder() // 더 자연스러움
+        viewModel.viewWillAppear.send(Void())
     }
     
     override func setupAttribute() {
         super.setupAttribute()
         
+        if let question = viewModel.question {
+            questionLabel.text = question.content
+        }
+        questionLabel.setupLineSpacing(4)
         textView.delegate = self
         textView.layoutManager.delegate = self
         backButton.makeCorenerRadius(backButton.frame.height/2)
+    }
+    
+    override func bind() {
+        viewModel.questionContent
+            .sink { [weak self] in
+                self?.questionLabel.text = $0
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.textViewCondition
+            .sink { [weak self] canChange in
+                if !canChange {
+                    self?.textView.text = String(self?.textView.text.prefix(600) ?? "")
+                    self?.showAlertView()
+                }
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.textCount
+            .sink { [weak self] in
+                self?.placeholderLabel.isHidden = !($0 == 0)
+                self?.textCountLabel.text = "\($0) / 600"
+            }
+            .store(in: &cancelBag)
+        
+        viewModel.storeCompleted
+            .sink { [weak self] success in
+                if success {
+                    self?.dismiss(animated: true)
+                } else {
+                    self?.showEmptyAlertView()
+                }
+                
+            }
+            .store(in: &cancelBag)
     }
 
     deinit {
@@ -32,7 +74,7 @@ class WritingViewController: BaseViewController {
     }
     
     @IBAction func pressCompleteButton(_ sender: Any) {
-        self.dismiss(animated: true)
+        viewModel.completButtonPressed.send(textView.text)
     }
     
     @IBAction func pressBackButton(_ sender: Any) {
@@ -58,6 +100,10 @@ extension WritingViewController {
         center.addObserver(self,
                            selector: #selector(animateViewForKeyboardShow(_:)),
                            name: UIResponder.keyboardWillShowNotification, object: nil)
+        center.addObserver(self,
+                           selector: #selector(animateViewForKeyboardHide(_:)),
+                           name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
     
     @objc func animateViewForKeyboardShow(_ notification: NSNotification) {
@@ -67,6 +113,17 @@ extension WritingViewController {
             guard let keyboardFrame = keyboardFrame else { return }
             
             textViewBottomConstraint.constant = keyboardFrame.height - DeviceInfo.bottomSafeAreaInset + 20
+            
+            UIView.animate(withDuration: keyboardDuration) { self.view.layoutIfNeeded() }
+        }
+    }
+    
+    @objc func animateViewForKeyboardHide(_ notification: NSNotification) {
+        self.animateWithKeyboard(notification) { [weak self] keyboardFrame, keyboardDuration in
+            guard let self = self                         else { return }
+            guard let keyboardDuration = keyboardDuration else { return }
+            
+            textViewBottomConstraint.constant = DeviceInfo.bottomSafeAreaInset + 20
             
             UIView.animate(withDuration: keyboardDuration) { self.view.layoutIfNeeded() }
         }
@@ -84,23 +141,18 @@ extension WritingViewController: NSLayoutManagerDelegate {
 // MARK: UITextViewDelegate
 extension WritingViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        let isHidden = textView.text.isEmpty
-        placeholderLabel.isHidden = !isHidden
-        
-        let count = calculateTextCount(textView.text)
-        if count > 600 {
-            textView.text = String(textView.text.prefix(600))
-            showAlertView()
-        }
-        textCountLabel.text = "\(calculateTextCount(textView.text)) / 600"
-    }
-    
-    private func calculateTextCount(_ text: String) -> Int {
-        return text.count
+        viewModel.textViewChanged.send(textView.text)
     }
 }
 
 extension WritingViewController {
+    
+    private func showEmptyAlertView() {
+        let alertViewController = UIAlertController(title: "경고 ⚠️", message: "답변을 작성해주세요.", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "✅", style: .default)
+        alertViewController.addAction(okButton)
+        self.present(alertViewController, animated: true)
+    }
     
     private func showAlertView() {
         let alertViewController = UIAlertController(title: "경고 ⚠️", message: "600자 이하로 작성해주세요.", preferredStyle: .alert)

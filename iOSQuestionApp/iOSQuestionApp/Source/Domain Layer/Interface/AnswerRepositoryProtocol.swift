@@ -8,6 +8,7 @@
 import Foundation
 
 protocol AnswerRepositoryProtocol {
-    func saveAnswer(_ answer: Answer)
+    func saveAnswer(_ answer: Answer, completion: (Bool)-> Void)
+    func getAnswerCount() -> Int 
     func getAnswer(of question: Question) -> [Answer]
 }

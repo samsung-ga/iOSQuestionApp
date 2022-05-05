@@ -29,7 +29,6 @@ class HapticTetViewController: UIViewController {
 
     @objc func tapped() {
         i += 1
-        print("Running \(i)")
 
         switch i {
         case 1:

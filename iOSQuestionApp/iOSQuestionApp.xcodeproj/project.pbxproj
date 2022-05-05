@@ -42,6 +42,16 @@
 		EF8E90CE2823D04900CE394F /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90CD2823D04900CE394F /* WritingViewController.swift */; };
 		EF8E90D02823D05200CE394F /* WritingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8E90CF2823D05200CE394F /* WritingViewController.storyboard */; };
 		EF8E90D22823E61400CE394F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90D12823E61400CE394F /* UIViewController+.swift */; };
+		EF8E90D52823EF6800CE394F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90D42823EF6800CE394F /* HomeViewModel.swift */; };
+		EF8E90D72823F11300CE394F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90D62823F11300CE394F /* SettingViewModel.swift */; };
+		EF8E90D92823F22900CE394F /* WritingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90D82823F22900CE394F /* WritingViewModel.swift */; };
+		EF8E90DB2823F67300CE394F /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90DA2823F67300CE394F /* Date+.swift */; };
+		EF8E90DD2823F7D500CE394F /* AddQuestionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90DC2823F7D500CE394F /* AddQuestionUseCase.swift */; };
+		EF8E90DF2824056E00CE394F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90DE2824056E00CE394F /* BaseViewModel.swift */; };
+		EF8E90E1282407F600CE394F /* RandomQuestionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E0282407F600CE394F /* RandomQuestionUseCase.swift */; };
+		EF8E90E528241E0F00CE394F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E428241E0F00CE394F /* String+.swift */; };
+		EF8E90E72824348600CE394F /* AnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E62824348600CE394F /* AnswerViewModel.swift */; };
+		EF8E90E9282434DF00CE394F /* AnswerListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E8282434DF00CE394F /* AnswerListUseCase.swift */; };
 		EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */; };
 		EFB2A077281F816100F4844C /* QuestionStatisticUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */; };
 		EFB2A079281F81C000F4844C /* AnswerNumberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */; };
@@ -105,6 +115,16 @@
 		EF8E90CD2823D04900CE394F /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		EF8E90CF2823D05200CE394F /* WritingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WritingViewController.storyboard; sourceTree = "<group>"; };
 		EF8E90D12823E61400CE394F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		EF8E90D42823EF6800CE394F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EF8E90D62823F11300CE394F /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		EF8E90D82823F22900CE394F /* WritingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewModel.swift; sourceTree = "<group>"; };
+		EF8E90DA2823F67300CE394F /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		EF8E90DC2823F7D500CE394F /* AddQuestionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionUseCase.swift; sourceTree = "<group>"; };
+		EF8E90DE2824056E00CE394F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		EF8E90E0282407F600CE394F /* RandomQuestionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionUseCase.swift; sourceTree = "<group>"; };
+		EF8E90E428241E0F00CE394F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		EF8E90E62824348600CE394F /* AnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewModel.swift; sourceTree = "<group>"; };
+		EF8E90E8282434DF00CE394F /* AnswerListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerListUseCase.swift; sourceTree = "<group>"; };
 		EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerExistenceUseCase.swift; sourceTree = "<group>"; };
 		EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatisticUseCase.swift; sourceTree = "<group>"; };
 		EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerNumberUseCase.swift; sourceTree = "<group>"; };
@@ -152,6 +172,7 @@
 				EF1434402822543800E8A11F /* CodeBasedView.swift */,
 				EF8E909E282388C700CE394F /* BaseTableViewCell.swift */,
 				EF8E90B62823A36E00CE394F /* BaseCollectionViewCell.swift */,
+				EF8E90DE2824056E00CE394F /* BaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -168,6 +189,7 @@
 		EF1434452822565100E8A11F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EF8E90D42823EF6800CE394F /* HomeViewModel.swift */,
 				EFD70272281BAFAB004EBA53 /* HomeViewController.swift */,
 				EF8E90A62823988800CE394F /* MainNavigationController.swift */,
 				EFD70274281BAFAB004EBA53 /* Main.storyboard */,
@@ -190,13 +212,13 @@
 		EF8E908F282379C600CE394F /* List */ = {
 			isa = PBXGroup;
 			children = (
+				EF8E90A42823962400CE394F /* ListViewModel.swift */,
 				EF8E9090282379D900CE394F /* ListViewController.swift */,
 				EF8E9092282379E700CE394F /* ListViewController.storyboard */,
 				EF8E909828237C2300CE394F /* StatisticTableViewCell.swift */,
 				EF8E909928237C2300CE394F /* StatisticTableViewCell.xib */,
 				EF8E90A0282389A500CE394F /* QuestionTableViewCell.swift */,
 				EF8E90A1282389A500CE394F /* QuestionTableViewCell.xib */,
-				EF8E90A42823962400CE394F /* ListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -204,6 +226,7 @@
 		EF8E90A828239AD500CE394F /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				EF8E90D62823F11300CE394F /* SettingViewModel.swift */,
 				EF8E90A928239AE200CE394F /* SettingViewController.swift */,
 				EF8E90AD28239BAC00CE394F /* SettingTableViewCell.swift */,
 				EF8E90AB28239AFD00CE394F /* SettingViewController.storyboard */,
@@ -214,6 +237,7 @@
 		EF8E90AF28239EC800CE394F /* Answer */ = {
 			isa = PBXGroup;
 			children = (
+				EF8E90E62824348600CE394F /* AnswerViewModel.swift */,
 				EF8E90B028239EDE00CE394F /* AnswerViewController.swift */,
 				EF8E90B228239EF600CE394F /* AnswerViewController.storyboard */,
 				EF8E90B82823A39B00CE394F /* AnswerCollectionViewCell.swift */,
@@ -235,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				EF8E90CD2823D04900CE394F /* WritingViewController.swift */,
+				EF8E90D82823F22900CE394F /* WritingViewModel.swift */,
 				EF8E90CF2823D05200CE394F /* WritingViewController.storyboard */,
 			);
 			path = Write;
@@ -304,6 +329,8 @@
 			children = (
 				EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */,
 				EFB2A07D281F820A00F4844C /* QuestionListUseCase.swift */,
+				EF8E90DC2823F7D500CE394F /* AddQuestionUseCase.swift */,
+				EF8E90E0282407F600CE394F /* RandomQuestionUseCase.swift */,
 			);
 			path = Question;
 			sourceTree = "<group>";
@@ -312,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				EFB2A080281F825800F4844C /* WriteAnswerUseCase.swift */,
+				EF8E90E8282434DF00CE394F /* AnswerListUseCase.swift */,
 			);
 			path = Answer;
 			sourceTree = "<group>";
@@ -362,6 +390,8 @@
 				EFBEFD752820C3EC00E114D8 /* UserDefaultKeyName.swift */,
 				EF8D392A282293B60002FF25 /* Constant.swift */,
 				EF8E90BF2823A6DD00CE394F /* DeviceInfo.swift */,
+				EF8E90DA2823F67300CE394F /* Date+.swift */,
+				EF8E90E428241E0F00CE394F /* String+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -405,6 +435,7 @@
 		EFD70286281BB370004EBA53 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
+				EF71BE31281BB4B2001AA251 /* Extensions */,
 				EF14343D2822541500E8A11F /* Base */,
 				EF143442282255B600E8A11F /* Common */,
 				EF1434452822565100E8A11F /* Home */,
@@ -423,7 +454,6 @@
 				EF71BE3E281BDCEA001AA251 /* ImageAsset.swift */,
 				EF71BE3C281BBA9F001AA251 /* Pallete.swift */,
 				EFBEFD742820C3E100E114D8 /* Utils */,
-				EF71BE31281BB4B2001AA251 /* Extensions */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -515,16 +545,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8E90BA2823A39B00CE394F /* AnswerCollectionViewCell.swift in Sources */,
+				EF8E90D92823F22900CE394F /* WritingViewModel.swift in Sources */,
 				EF8E90A2282389A500CE394F /* QuestionTableViewCell.swift in Sources */,
 				EF8E90C92823CD5500CE394F /* TestViewController.swift in Sources */,
+				EF8E90E72824348600CE394F /* AnswerViewModel.swift in Sources */,
 				EF8E9091282379D900CE394F /* ListViewController.swift in Sources */,
 				EFB2A079281F81C000F4844C /* AnswerNumberUseCase.swift in Sources */,
 				EF143444282255C300E8A11F /* IQButton.swift in Sources */,
+				EF8E90E528241E0F00CE394F /* String+.swift in Sources */,
 				EFBEFD732820BFBF00E114D8 /* TodayAnswerRepository.swift in Sources */,
 				EF8E909D2823802300CE394F /* UITableView+.swift in Sources */,
 				EF8E90C02823A6DD00CE394F /* DeviceInfo.swift in Sources */,
 				EFB2A097281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift in Sources */,
 				EFBEFD7A2820C6D700E114D8 /* QuestionRepository.swift in Sources */,
+				EF8E90DB2823F67300CE394F /* Date+.swift in Sources */,
 				EF71BE3F281BDCEA001AA251 /* ImageAsset.swift in Sources */,
 				EFD70273281BAFAB004EBA53 /* HomeViewController.swift in Sources */,
 				EF8E90CE2823D04900CE394F /* WritingViewController.swift in Sources */,
@@ -533,13 +567,16 @@
 				EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */,
 				EFBEFD682820AB3700E114D8 /* QuestionTable.swift in Sources */,
 				EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */,
+				EF8E90D52823EF6800CE394F /* HomeViewModel.swift in Sources */,
 				EFBEFD6A2820B55300E114D8 /* DatabaseError.swift in Sources */,
 				EF8E90A52823962400CE394F /* ListViewModel.swift in Sources */,
 				EFBEFD652820A6B400E114D8 /* SQLiteDatabase.swift in Sources */,
+				EF8E90DD2823F7D500CE394F /* AddQuestionUseCase.swift in Sources */,
 				EF8E909F282388C700CE394F /* BaseTableViewCell.swift in Sources */,
 				EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */,
 				EFB2A08C281F852C00F4844C /* Answer.swift in Sources */,
 				EF71BE3D281BBA9F001AA251 /* Pallete.swift in Sources */,
+				EF8E90DF2824056E00CE394F /* BaseViewModel.swift in Sources */,
 				EFBEFD762820C3EC00E114D8 /* UserDefaultKeyName.swift in Sources */,
 				EF8E90AA28239AE200CE394F /* SettingViewController.swift in Sources */,
 				EF8E90D22823E61400CE394F /* UIViewController+.swift in Sources */,
@@ -551,13 +588,16 @@
 				EF1434412822543800E8A11F /* CodeBasedView.swift in Sources */,
 				EF8E90B72823A36E00CE394F /* BaseCollectionViewCell.swift in Sources */,
 				EFB2A077281F816100F4844C /* QuestionStatisticUseCase.swift in Sources */,
+				EF8E90E9282434DF00CE394F /* AnswerListUseCase.swift in Sources */,
 				EFB2A08A281F842E00F4844C /* Question.swift in Sources */,
 				EF14343F2822541B00E8A11F /* BaseViewController.swift in Sources */,
 				EFB2A07E281F820A00F4844C /* QuestionListUseCase.swift in Sources */,
 				EF8E909A28237C2300CE394F /* StatisticTableViewCell.swift in Sources */,
 				EF8E90C52823B4AE00CE394F /* ShakePopupViewController.swift in Sources */,
+				EF8E90D72823F11300CE394F /* SettingViewModel.swift in Sources */,
 				EFB2A093281FB30D00F4844C /* AnswerRepositoryProtocol.swift in Sources */,
 				EF8E90B128239EDE00CE394F /* AnswerViewController.swift in Sources */,
+				EF8E90E1282407F600CE394F /* RandomQuestionUseCase.swift in Sources */,
 				EFB2A081281F825800F4844C /* WriteAnswerUseCase.swift in Sources */,
 				EF8E90AE28239BAC00CE394F /* SettingTableViewCell.swift in Sources */,
 				EFBEFD6C2820B56B00E114D8 /* AnswerTable.swift in Sources */,
@@ -725,7 +765,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -754,7 +794,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -16,17 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Swift] Class와 Struct의 차이점은 무엇일까요?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrC-hd-7VX">
-                                <rect key="frame" x="29" y="109" width="356" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Swift] Class와 Struct의 차이점은 무엇일까요?" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrC-hd-7VX">
+                                <rect key="frame" x="29" y="113.5" width="356" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REz-an-9qU">
-                                <rect key="frame" x="347" y="59" width="47" height="30"/>
+                                <rect key="frame" x="340.5" y="59" width="53.5" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="완료">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="13"/>
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -34,17 +34,17 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKd-BY-rWI">
-                                <rect key="frame" x="29" y="136" width="356" height="1"/>
+                                <rect key="frame" x="29" y="143" width="356" height="1"/>
                                 <color key="backgroundColor" name="gray"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="VHF-dW-1T6"/>
                                 </constraints>
                             </view>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cM3-iP-kZu">
-                                <rect key="frame" x="25" y="152" width="364" height="646"/>
+                                <rect key="frame" x="25" y="159" width="364" height="639"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKx-cO-aag">
@@ -64,13 +64,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="여기에 답변을 작성해보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EMG-L4-Ckx">
-                                <rect key="frame" x="31" y="159.5" width="158" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <rect key="frame" x="31" y="167.5" width="190.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 / 600" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8y-QF-UJP">
-                                <rect key="frame" x="337" y="829.5" width="48" height="17"/>
+                                <rect key="frame" x="337" y="839" width="48" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" name="gray"/>
                                 <nil key="highlightedColor"/>
@@ -89,7 +89,7 @@
                             <constraint firstItem="hKx-cO-aag" firstAttribute="top" secondItem="cM3-iP-kZu" secondAttribute="bottom" constant="24" id="QSk-1b-pAa"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M8y-QF-UJP" secondAttribute="trailing" constant="29" id="VXZ-uB-krv"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OrC-hd-7VX" secondAttribute="trailing" constant="29" id="ck7-wc-atX"/>
-                            <constraint firstItem="M8y-QF-UJP" firstAttribute="bottom" secondItem="hKx-cO-aag" secondAttribute="firstBaseline" id="eCF-39-Nah"/>
+                            <constraint firstItem="M8y-QF-UJP" firstAttribute="bottom" secondItem="hKx-cO-aag" secondAttribute="bottom" constant="-6" id="eCF-39-Nah"/>
                             <constraint firstItem="ZKd-BY-rWI" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="29" id="eUq-XW-Y4g"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="hKx-cO-aag" secondAttribute="bottom" id="fj0-OL-ThN"/>
                             <constraint firstItem="OrC-hd-7VX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="29" id="iSB-mp-Gih"/>

@@ -8,12 +8,12 @@
 import Foundation
 import Combine
 
-class AnswerNumberUseCase {
+final class AnswerNumberUseCase {
     private let questionRepository: QuestionRepositoryProtocol
     
     let answerNumber = CurrentValueSubject<Int, Never>(0)
     
-    init(questionRepository: QuestionRepositoryProtocol) {
+    init(_ questionRepository: QuestionRepositoryProtocol) {
         self.questionRepository = questionRepository
     }
 }

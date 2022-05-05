@@ -19,10 +19,17 @@ final class AnswerRepository {
 
 extension AnswerRepository: AnswerRepositoryProtocol {
     
-    func saveAnswer(_ answer: Answer) {
-        _ = answerTable.insertRow(answer)
+    func saveAnswer(_ answer: Answer, completion: (Bool)-> Void) {
+        let result = answerTable.insertRow(answer) ?? false
+        completion(result)
     }
     
+    func getAnswerCount() -> Int {
+        if let answers = answerTable.getRow() {
+            return answers.count
+        }
+        return 0
+    }
     func getAnswer(of question: Question) -> [Answer] {
         if let answers = answerTable.getRow() {
             return answers.filter { $0.questionID == question.id }

@@ -11,10 +11,12 @@ import Combine
 final class QuestionListUseCase {
     private let questionRepository: QuestionRepositoryProtocol
     private let answerRepository: AnswerRepositoryProtocol
-
-    typealias QuestionListInformation = [Question: Int]
     
-    let questionList = CurrentValueSubject<QuestionListInformation, Never>([:])
+    typealias DateString = String
+    typealias AnswerCount = Int
+    typealias QuestionListInformation = ([Question],[AnswerCount],[DateString])
+    
+    let questionList = CurrentValueSubject<QuestionListInformation, Never>(([],[],[]))
     
     init(_ questionRepository: QuestionRepositoryProtocol,
          _ answerRepository: AnswerRepositoryProtocol) {
@@ -24,13 +26,28 @@ final class QuestionListUseCase {
 }
 
 extension QuestionListUseCase {
+    
     func requestQuestionListInformation() {
-        var questionListInfo = [Question:Int]()
+        var answerCounts = [AnswerCount]()
+        var dateStrings = [DateString]()
         let questions = questionRepository.getQuestionsAnswered()
         questions.forEach {
             let answers = answerRepository.getAnswer(of: $0)
-            questionListInfo[$0] = 0
+            print(answers)
+            let newestDate = compareDate(answers)
+            answerCounts.append(answers.count)
+            dateStrings.append(newestDate)
         }
-        
+        print(dateStrings)
+        questionList.send((questions, answerCounts, dateStrings))
+    }
+    
+    private func compareDate(_ answers: [Answer]) -> DateString {
+        if answers.isEmpty { return "" }
+        var newest: Date =  answers[0].date.convertStringToDate()
+        answers.forEach {
+            newest = max(newest, $0.date.convertStringToDate())
+        }
+        return newest.convertDateToString()
     }
 }

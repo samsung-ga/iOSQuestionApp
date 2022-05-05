@@ -24,12 +24,12 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-fm-1w2">
-                                <rect key="frame" x="103.33333333333333" y="326" width="183.33333333333337" height="71.666666666666686"/>
+                                <rect key="frame" x="91.666666666666686" y="300" width="207" height="81.333333333333314"/>
                                 <string key="text">답변에는 정답은 없습니다!
 
 매일 인터뷰 질문에 답변을 하며
 자신을 성장시키세요!</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -42,7 +42,7 @@
                             <constraint firstItem="8bW-fm-1w2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EKF-mm-U61"/>
                             <constraint firstItem="oO1-5O-nFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nhv-sV-o6K"/>
                             <constraint firstItem="oO1-5O-nFM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="du4-Ki-ykj"/>
-                            <constraint firstItem="8bW-fm-1w2" firstAttribute="top" secondItem="oO1-5O-nFM" secondAttribute="bottom" constant="66" id="otI-lC-CVf"/>
+                            <constraint firstItem="8bW-fm-1w2" firstAttribute="top" secondItem="oO1-5O-nFM" secondAttribute="bottom" constant="40" id="otI-lC-CVf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="iOS Question App" id="bmi-2K-llU">
