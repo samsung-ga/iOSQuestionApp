@@ -240,6 +240,19 @@
 			path = Write;
 			sourceTree = "<group>";
 		};
+		EF8E90D32823EF2D00CE394F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */,
+				EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */,
+				EFD70287281BB37A004EBA53 /* Global */,
+				EFB2A071281F810500F4844C /* Domain Layer */,
+				EFD70286281BB370004EBA53 /* Presentation Layer */,
+				EFB2A072281F811900F4844C /* Data Layer */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		EFB2A071281F810500F4844C /* Domain Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,10 +385,7 @@
 		EFD7026D281BAFAB004EBA53 /* iOSQuestionApp */ = {
 			isa = PBXGroup;
 			children = (
-				EFD70287281BB37A004EBA53 /* Global */,
-				EFB2A071281F810500F4844C /* Domain Layer */,
-				EFD70286281BB370004EBA53 /* Presentation Layer */,
-				EFB2A072281F811900F4844C /* Data Layer */,
+				EF8E90D32823EF2D00CE394F /* Source */,
 				EFD70283281BB2D7004EBA53 /* Resource */,
 			);
 			path = iOSQuestionApp;
@@ -395,8 +405,6 @@
 		EFD70286281BB370004EBA53 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */,
-				EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */,
 				EF14343D2822541500E8A11F /* Base */,
 				EF143442282255B600E8A11F /* Common */,
 				EF1434452822565100E8A11F /* Home */,
