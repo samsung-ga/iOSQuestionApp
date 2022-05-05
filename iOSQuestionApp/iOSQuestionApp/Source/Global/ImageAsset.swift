@@ -13,6 +13,8 @@ enum ImageAsset: String {
     case gearshape
     case phone
     case moving
+    case container_1
+    case blurEffect
 }
 
 extension ImageAsset {

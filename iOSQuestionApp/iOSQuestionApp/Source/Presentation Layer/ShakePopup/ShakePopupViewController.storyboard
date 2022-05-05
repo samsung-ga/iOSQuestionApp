@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shake Popup View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="ShakePopupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ShakePopupViewController" customModule="iOSQuestionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpi-hJ-5Jn">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="pressBackButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="s0c-HS-KND"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kH6-82-kV2">
+                                <rect key="frame" x="71.5" y="264" width="271" height="368"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" translatesAutoresizingMaskIntoConstraints="NO" id="rkk-2L-zeP">
+                                        <rect key="frame" x="63.5" y="60" width="144" height="135"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moving" translatesAutoresizingMaskIntoConstraints="NO" id="mxr-8B-cGO">
+                                        <rect key="frame" x="197" y="88" width="34" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="cD5-tL-M8I"/>
+                                            <constraint firstAttribute="height" constant="58" id="kJi-c9-kGO"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S81-yH-j5H">
+                                        <rect key="frame" x="54.5" y="273" width="162" height="29"/>
+                                        <string key="text">핸드폰을 한 번 세게 흔들어주세요!
+랜덤 질문이 하나 뽑혀요~</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="point"/>
+                                <constraints>
+                                    <constraint firstItem="rkk-2L-zeP" firstAttribute="centerX" secondItem="kH6-82-kV2" secondAttribute="centerX" id="6td-o2-kmA"/>
+                                    <constraint firstItem="rkk-2L-zeP" firstAttribute="top" secondItem="mxr-8B-cGO" secondAttribute="bottom" constant="-86" id="8dM-SG-Xck"/>
+                                    <constraint firstAttribute="bottom" secondItem="S81-yH-j5H" secondAttribute="bottom" constant="66" id="G5X-Yi-liC"/>
+                                    <constraint firstAttribute="width" constant="271" id="Sge-c6-Llg"/>
+                                    <constraint firstAttribute="height" constant="368" id="WV7-c2-nKe"/>
+                                    <constraint firstItem="rkk-2L-zeP" firstAttribute="top" secondItem="kH6-82-kV2" secondAttribute="top" constant="60" id="gcD-Ni-Nod"/>
+                                    <constraint firstItem="mxr-8B-cGO" firstAttribute="leading" secondItem="rkk-2L-zeP" secondAttribute="trailing" constant="-10.5" id="q2y-Vx-g50"/>
+                                    <constraint firstItem="S81-yH-j5H" firstAttribute="centerX" secondItem="kH6-82-kV2" secondAttribute="centerX" id="xXr-9a-Jgz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wpi-hJ-5Jn" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="VSn-Ws-u1X"/>
+                            <constraint firstItem="kH6-82-kV2" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="XM1-qi-Io0"/>
+                            <constraint firstItem="kH6-82-kV2" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="Xt7-Px-KGK"/>
+                            <constraint firstAttribute="bottom" secondItem="Wpi-hJ-5Jn" secondAttribute="bottom" id="axj-J6-Y7k"/>
+                            <constraint firstItem="Wpi-hJ-5Jn" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="c4t-Gi-gAe"/>
+                            <constraint firstItem="Wpi-hJ-5Jn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="h7n-62-kbr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="kH6-82-kV2" id="biU-m1-JfF"/>
+                        <outlet property="guideLabel" destination="S81-yH-j5H" id="iBg-pn-xzp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="6.6964285714285712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="moving" width="43" height="53"/>
+        <image name="phone" width="144" height="135"/>
+        <namedColor name="point">
+            <color red="0.054999999701976776" green="0.059000000357627869" blue="0.086000002920627594" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
