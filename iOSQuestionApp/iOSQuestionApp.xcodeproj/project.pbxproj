@@ -7,10 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF14343F2822541B00E8A11F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF14343E2822541B00E8A11F /* BaseViewController.swift */; };
+		EF1434412822543800E8A11F /* CodeBasedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1434402822543800E8A11F /* CodeBasedView.swift */; };
+		EF143444282255C300E8A11F /* IQButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF143443282255C300E8A11F /* IQButton.swift */; };
 		EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71BE32281BB4BA001AA251 /* UIView+.swift */; };
 		EF71BE35281BB506001AA251 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF71BE34281BB506001AA251 /* Colors.xcassets */; };
 		EF71BE3D281BBA9F001AA251 /* Pallete.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71BE3C281BBA9F001AA251 /* Pallete.swift */; };
 		EF71BE3F281BDCEA001AA251 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF71BE3E281BDCEA001AA251 /* ImageAsset.swift */; };
+		EF8D392B282293B60002FF25 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8D392A282293B60002FF25 /* Constant.swift */; };
+		EF8E9091282379D900CE394F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E9090282379D900CE394F /* ListViewController.swift */; };
+		EF8E9093282379E700CE394F /* ListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8E9092282379E700CE394F /* ListViewController.storyboard */; };
+		EF8E909A28237C2300CE394F /* StatisticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E909828237C2300CE394F /* StatisticTableViewCell.swift */; };
+		EF8E909B28237C2300CE394F /* StatisticTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8E909928237C2300CE394F /* StatisticTableViewCell.xib */; };
+		EF8E909D2823802300CE394F /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E909C2823802300CE394F /* UITableView+.swift */; };
+		EF8E909F282388C700CE394F /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E909E282388C700CE394F /* BaseTableViewCell.swift */; };
+		EF8E90A2282389A500CE394F /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90A0282389A500CE394F /* QuestionTableViewCell.swift */; };
+		EF8E90A3282389A500CE394F /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8E90A1282389A500CE394F /* QuestionTableViewCell.xib */; };
+		EF8E90A52823962400CE394F /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90A42823962400CE394F /* ListViewModel.swift */; };
+		EF8E90A72823988800CE394F /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90A62823988800CE394F /* MainNavigationController.swift */; };
+		EF8E90AA28239AE200CE394F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90A928239AE200CE394F /* SettingViewController.swift */; };
+		EF8E90AC28239AFD00CE394F /* SettingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8E90AB28239AFD00CE394F /* SettingViewController.storyboard */; };
+		EF8E90AE28239BAC00CE394F /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90AD28239BAC00CE394F /* SettingTableViewCell.swift */; };
+		EF8E90B128239EDE00CE394F /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90B028239EDE00CE394F /* AnswerViewController.swift */; };
+		EF8E90B328239EF600CE394F /* AnswerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8E90B228239EF600CE394F /* AnswerViewController.storyboard */; };
+		EF8E90B72823A36E00CE394F /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90B62823A36E00CE394F /* BaseCollectionViewCell.swift */; };
+		EF8E90BA2823A39B00CE394F /* AnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90B82823A39B00CE394F /* AnswerCollectionViewCell.swift */; };
+		EF8E90BB2823A39B00CE394F /* AnswerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF8E90B92823A39B00CE394F /* AnswerCollectionViewCell.xib */; };
+		EF8E90BD2823A3BD00CE394F /* UICollectionView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90BC2823A3BD00CE394F /* UICollectionView+.swift */; };
+		EF8E90C02823A6DD00CE394F /* DeviceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90BF2823A6DD00CE394F /* DeviceInfo.swift */; };
+		EF8E90C52823B4AE00CE394F /* ShakePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90C42823B4AE00CE394F /* ShakePopupViewController.swift */; };
+		EF8E90C72823B57E00CE394F /* ShakePopupViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8E90C62823B57E00CE394F /* ShakePopupViewController.storyboard */; };
+		EF8E90C92823CD5500CE394F /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90C82823CD5500CE394F /* TestViewController.swift */; };
+		EF8E90CB2823CE6900CE394F /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90CA2823CE6900CE394F /* UILabel+.swift */; };
+		EF8E90CE2823D04900CE394F /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90CD2823D04900CE394F /* WritingViewController.swift */; };
+		EF8E90D02823D05200CE394F /* WritingViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8E90CF2823D05200CE394F /* WritingViewController.storyboard */; };
+		EF8E90D22823E61400CE394F /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90D12823E61400CE394F /* UIViewController+.swift */; };
 		EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */; };
 		EFB2A077281F816100F4844C /* QuestionStatisticUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */; };
 		EFB2A079281F81C000F4844C /* AnswerNumberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */; };
@@ -32,17 +63,48 @@
 		EFBEFD7A2820C6D700E114D8 /* QuestionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEFD792820C6D700E114D8 /* QuestionRepository.swift */; };
 		EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */; };
 		EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */; };
-		EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70272281BAFAB004EBA53 /* ViewController.swift */; };
+		EFD70273281BAFAB004EBA53 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD70272281BAFAB004EBA53 /* HomeViewController.swift */; };
 		EFD70276281BAFAB004EBA53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD70274281BAFAB004EBA53 /* Main.storyboard */; };
 		EFD70278281BAFAE004EBA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD70277281BAFAE004EBA53 /* Assets.xcassets */; };
 		EFD7027B281BAFAE004EBA53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD70279281BAFAE004EBA53 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF14343E2822541B00E8A11F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		EF1434402822543800E8A11F /* CodeBasedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBasedView.swift; sourceTree = "<group>"; };
+		EF143443282255C300E8A11F /* IQButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IQButton.swift; sourceTree = "<group>"; };
 		EF71BE32281BB4BA001AA251 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		EF71BE34281BB506001AA251 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		EF71BE3C281BBA9F001AA251 /* Pallete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pallete.swift; sourceTree = "<group>"; };
 		EF71BE3E281BDCEA001AA251 /* ImageAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAsset.swift; sourceTree = "<group>"; };
+		EF8D392A282293B60002FF25 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		EF8E9090282379D900CE394F /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		EF8E9092282379E700CE394F /* ListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListViewController.storyboard; sourceTree = "<group>"; };
+		EF8E909828237C2300CE394F /* StatisticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticTableViewCell.swift; sourceTree = "<group>"; };
+		EF8E909928237C2300CE394F /* StatisticTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticTableViewCell.xib; sourceTree = "<group>"; };
+		EF8E909C2823802300CE394F /* UITableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		EF8E909E282388C700CE394F /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		EF8E90A0282389A500CE394F /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		EF8E90A1282389A500CE394F /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
+		EF8E90A42823962400CE394F /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		EF8E90A62823988800CE394F /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		EF8E90A928239AE200CE394F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		EF8E90AB28239AFD00CE394F /* SettingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingViewController.storyboard; sourceTree = "<group>"; };
+		EF8E90AD28239BAC00CE394F /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		EF8E90B028239EDE00CE394F /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		EF8E90B228239EF600CE394F /* AnswerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnswerViewController.storyboard; sourceTree = "<group>"; };
+		EF8E90B62823A36E00CE394F /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF8E90B82823A39B00CE394F /* AnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF8E90B92823A39B00CE394F /* AnswerCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerCollectionViewCell.xib; sourceTree = "<group>"; };
+		EF8E90BC2823A3BD00CE394F /* UICollectionView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+.swift"; sourceTree = "<group>"; };
+		EF8E90BF2823A6DD00CE394F /* DeviceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfo.swift; sourceTree = "<group>"; };
+		EF8E90C42823B4AE00CE394F /* ShakePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShakePopupViewController.swift; sourceTree = "<group>"; };
+		EF8E90C62823B57E00CE394F /* ShakePopupViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShakePopupViewController.storyboard; sourceTree = "<group>"; };
+		EF8E90C82823CD5500CE394F /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		EF8E90CA2823CE6900CE394F /* UILabel+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		EF8E90CD2823D04900CE394F /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
+		EF8E90CF2823D05200CE394F /* WritingViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WritingViewController.storyboard; sourceTree = "<group>"; };
+		EF8E90D12823E61400CE394F /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerExistenceUseCase.swift; sourceTree = "<group>"; };
 		EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatisticUseCase.swift; sourceTree = "<group>"; };
 		EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerNumberUseCase.swift; sourceTree = "<group>"; };
@@ -64,7 +126,7 @@
 		EFD7026B281BAFAB004EBA53 /* iOSQuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSQuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EFD70272281BAFAB004EBA53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFD70272281BAFAB004EBA53 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EFD70275281BAFAB004EBA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFD70277281BAFAE004EBA53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFD7027A281BAFAE004EBA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -83,12 +145,99 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF14343D2822541500E8A11F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EF14343E2822541B00E8A11F /* BaseViewController.swift */,
+				EF1434402822543800E8A11F /* CodeBasedView.swift */,
+				EF8E909E282388C700CE394F /* BaseTableViewCell.swift */,
+				EF8E90B62823A36E00CE394F /* BaseCollectionViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		EF143442282255B600E8A11F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EF143443282255C300E8A11F /* IQButton.swift */,
+				EF8E90C82823CD5500CE394F /* TestViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EF1434452822565100E8A11F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EFD70272281BAFAB004EBA53 /* HomeViewController.swift */,
+				EF8E90A62823988800CE394F /* MainNavigationController.swift */,
+				EFD70274281BAFAB004EBA53 /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		EF71BE31281BB4B2001AA251 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				EF71BE32281BB4BA001AA251 /* UIView+.swift */,
+				EF8E909C2823802300CE394F /* UITableView+.swift */,
+				EF8E90BC2823A3BD00CE394F /* UICollectionView+.swift */,
+				EF8E90CA2823CE6900CE394F /* UILabel+.swift */,
+				EF8E90D12823E61400CE394F /* UIViewController+.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF8E908F282379C600CE394F /* List */ = {
+			isa = PBXGroup;
+			children = (
+				EF8E9090282379D900CE394F /* ListViewController.swift */,
+				EF8E9092282379E700CE394F /* ListViewController.storyboard */,
+				EF8E909828237C2300CE394F /* StatisticTableViewCell.swift */,
+				EF8E909928237C2300CE394F /* StatisticTableViewCell.xib */,
+				EF8E90A0282389A500CE394F /* QuestionTableViewCell.swift */,
+				EF8E90A1282389A500CE394F /* QuestionTableViewCell.xib */,
+				EF8E90A42823962400CE394F /* ListViewModel.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		EF8E90A828239AD500CE394F /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				EF8E90A928239AE200CE394F /* SettingViewController.swift */,
+				EF8E90AD28239BAC00CE394F /* SettingTableViewCell.swift */,
+				EF8E90AB28239AFD00CE394F /* SettingViewController.storyboard */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		EF8E90AF28239EC800CE394F /* Answer */ = {
+			isa = PBXGroup;
+			children = (
+				EF8E90B028239EDE00CE394F /* AnswerViewController.swift */,
+				EF8E90B228239EF600CE394F /* AnswerViewController.storyboard */,
+				EF8E90B82823A39B00CE394F /* AnswerCollectionViewCell.swift */,
+				EF8E90B92823A39B00CE394F /* AnswerCollectionViewCell.xib */,
+			);
+			path = Answer;
+			sourceTree = "<group>";
+		};
+		EF8E90C32823B49C00CE394F /* ShakePopup */ = {
+			isa = PBXGroup;
+			children = (
+				EF8E90C42823B4AE00CE394F /* ShakePopupViewController.swift */,
+				EF8E90C62823B57E00CE394F /* ShakePopupViewController.storyboard */,
+			);
+			path = ShakePopup;
+			sourceTree = "<group>";
+		};
+		EF8E90CC2823D03D00CE394F /* Write */ = {
+			isa = PBXGroup;
+			children = (
+				EF8E90CD2823D04900CE394F /* WritingViewController.swift */,
+				EF8E90CF2823D05200CE394F /* WritingViewController.storyboard */,
+			);
+			path = Write;
 			sourceTree = "<group>";
 		};
 		EFB2A071281F810500F4844C /* Domain Layer */ = {
@@ -198,6 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				EFBEFD752820C3EC00E114D8 /* UserDefaultKeyName.swift */,
+				EF8D392A282293B60002FF25 /* Constant.swift */,
+				EF8E90BF2823A6DD00CE394F /* DeviceInfo.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -244,10 +395,16 @@
 		EFD70286281BB370004EBA53 /* Presentation Layer */ = {
 			isa = PBXGroup;
 			children = (
-				EFD70274281BAFAB004EBA53 /* Main.storyboard */,
 				EFD7026E281BAFAB004EBA53 /* AppDelegate.swift */,
-				EFD70272281BAFAB004EBA53 /* ViewController.swift */,
 				EFD70270281BAFAB004EBA53 /* SceneDelegate.swift */,
+				EF14343D2822541500E8A11F /* Base */,
+				EF143442282255B600E8A11F /* Common */,
+				EF1434452822565100E8A11F /* Home */,
+				EF8E908F282379C600CE394F /* List */,
+				EF8E90AF28239EC800CE394F /* Answer */,
+				EF8E90C32823B49C00CE394F /* ShakePopup */,
+				EF8E90CC2823D03D00CE394F /* Write */,
+				EF8E90A828239AD500CE394F /* Setting */,
 			);
 			path = "Presentation Layer";
 			sourceTree = "<group>";
@@ -255,9 +412,9 @@
 		EFD70287281BB37A004EBA53 /* Global */ = {
 			isa = PBXGroup;
 			children = (
-				EFBEFD742820C3E100E114D8 /* Utils */,
 				EF71BE3E281BDCEA001AA251 /* ImageAsset.swift */,
 				EF71BE3C281BBA9F001AA251 /* Pallete.swift */,
+				EFBEFD742820C3E100E114D8 /* Utils */,
 				EF71BE31281BB4B2001AA251 /* Extensions */,
 			);
 			path = Global;
@@ -327,9 +484,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8E90B328239EF600CE394F /* AnswerViewController.storyboard in Resources */,
+				EF8E90AC28239AFD00CE394F /* SettingViewController.storyboard in Resources */,
+				EF8E90C72823B57E00CE394F /* ShakePopupViewController.storyboard in Resources */,
+				EF8E909B28237C2300CE394F /* StatisticTableViewCell.xib in Resources */,
+				EF8E90D02823D05200CE394F /* WritingViewController.storyboard in Resources */,
 				EFD7027B281BAFAE004EBA53 /* LaunchScreen.storyboard in Resources */,
 				EF71BE35281BB506001AA251 /* Colors.xcassets in Resources */,
+				EF8E9093282379E700CE394F /* ListViewController.storyboard in Resources */,
 				EFD70278281BAFAE004EBA53 /* Assets.xcassets in Resources */,
+				EF8E90A3282389A500CE394F /* QuestionTableViewCell.xib in Resources */,
+				EF8E90BB2823A39B00CE394F /* AnswerCollectionViewCell.xib in Resources */,
 				EFD70276281BAFAB004EBA53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,29 +506,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8E90BA2823A39B00CE394F /* AnswerCollectionViewCell.swift in Sources */,
+				EF8E90A2282389A500CE394F /* QuestionTableViewCell.swift in Sources */,
+				EF8E90C92823CD5500CE394F /* TestViewController.swift in Sources */,
+				EF8E9091282379D900CE394F /* ListViewController.swift in Sources */,
 				EFB2A079281F81C000F4844C /* AnswerNumberUseCase.swift in Sources */,
+				EF143444282255C300E8A11F /* IQButton.swift in Sources */,
 				EFBEFD732820BFBF00E114D8 /* TodayAnswerRepository.swift in Sources */,
+				EF8E909D2823802300CE394F /* UITableView+.swift in Sources */,
+				EF8E90C02823A6DD00CE394F /* DeviceInfo.swift in Sources */,
 				EFB2A097281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift in Sources */,
 				EFBEFD7A2820C6D700E114D8 /* QuestionRepository.swift in Sources */,
 				EF71BE3F281BDCEA001AA251 /* ImageAsset.swift in Sources */,
-				EFD70273281BAFAB004EBA53 /* ViewController.swift in Sources */,
+				EFD70273281BAFAB004EBA53 /* HomeViewController.swift in Sources */,
+				EF8E90CE2823D04900CE394F /* WritingViewController.swift in Sources */,
+				EF8D392B282293B60002FF25 /* Constant.swift in Sources */,
 				EFD7026F281BAFAB004EBA53 /* AppDelegate.swift in Sources */,
 				EFD70271281BAFAB004EBA53 /* SceneDelegate.swift in Sources */,
 				EFBEFD682820AB3700E114D8 /* QuestionTable.swift in Sources */,
 				EF71BE33281BB4BA001AA251 /* UIView+.swift in Sources */,
 				EFBEFD6A2820B55300E114D8 /* DatabaseError.swift in Sources */,
+				EF8E90A52823962400CE394F /* ListViewModel.swift in Sources */,
 				EFBEFD652820A6B400E114D8 /* SQLiteDatabase.swift in Sources */,
+				EF8E909F282388C700CE394F /* BaseTableViewCell.swift in Sources */,
 				EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */,
 				EFB2A08C281F852C00F4844C /* Answer.swift in Sources */,
 				EF71BE3D281BBA9F001AA251 /* Pallete.swift in Sources */,
 				EFBEFD762820C3EC00E114D8 /* UserDefaultKeyName.swift in Sources */,
+				EF8E90AA28239AE200CE394F /* SettingViewController.swift in Sources */,
+				EF8E90D22823E61400CE394F /* UIViewController+.swift in Sources */,
+				EF8E90CB2823CE6900CE394F /* UILabel+.swift in Sources */,
 				EFB2A095281FB31600F4844C /* QuestionRepositoryProtocol.swift in Sources */,
+				EF8E90BD2823A3BD00CE394F /* UICollectionView+.swift in Sources */,
 				EFBEFD782820C6CD00E114D8 /* AnswerRepository.swift in Sources */,
+				EF8E90A72823988800CE394F /* MainNavigationController.swift in Sources */,
+				EF1434412822543800E8A11F /* CodeBasedView.swift in Sources */,
+				EF8E90B72823A36E00CE394F /* BaseCollectionViewCell.swift in Sources */,
 				EFB2A077281F816100F4844C /* QuestionStatisticUseCase.swift in Sources */,
 				EFB2A08A281F842E00F4844C /* Question.swift in Sources */,
+				EF14343F2822541B00E8A11F /* BaseViewController.swift in Sources */,
 				EFB2A07E281F820A00F4844C /* QuestionListUseCase.swift in Sources */,
+				EF8E909A28237C2300CE394F /* StatisticTableViewCell.swift in Sources */,
+				EF8E90C52823B4AE00CE394F /* ShakePopupViewController.swift in Sources */,
 				EFB2A093281FB30D00F4844C /* AnswerRepositoryProtocol.swift in Sources */,
+				EF8E90B128239EDE00CE394F /* AnswerViewController.swift in Sources */,
 				EFB2A081281F825800F4844C /* WriteAnswerUseCase.swift in Sources */,
+				EF8E90AE28239BAC00CE394F /* SettingTableViewCell.swift in Sources */,
 				EFBEFD6C2820B56B00E114D8 /* AnswerTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +705,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,6 +734,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uN2-3b-Tgc">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--iOS Question App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="iOSQuestionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swiftLogo" translatesAutoresizingMaskIntoConstraints="NO" id="oO1-5O-nFM">
+                                <rect key="frame" x="140" y="158" width="110" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="RGB-1i-D1G"/>
+                                    <constraint firstAttribute="width" constant="110" id="nVx-46-0zo"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-fm-1w2">
+                                <rect key="frame" x="103.33333333333333" y="326" width="183.33333333333337" height="71.666666666666686"/>
+                                <string key="text">답변에는 정답은 없습니다!
+
+매일 인터뷰 질문에 답변을 하며
+자신을 성장시키세요!</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="main"/>
+                        <constraints>
+                            <constraint firstItem="oO1-5O-nFM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="4sX-9E-L7u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oO1-5O-nFM" secondAttribute="trailing" constant="140" id="5ib-qW-0Vz"/>
+                            <constraint firstItem="8bW-fm-1w2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EKF-mm-U61"/>
+                            <constraint firstItem="oO1-5O-nFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nhv-sV-o6K"/>
+                            <constraint firstItem="oO1-5O-nFM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140" id="du4-Ki-ykj"/>
+                            <constraint firstItem="8bW-fm-1w2" firstAttribute="top" secondItem="oO1-5O-nFM" secondAttribute="bottom" constant="66" id="otI-lC-CVf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="iOS Question App" id="bmi-2K-llU">
+                        <barButtonItem key="leftBarButtonItem" image="list_dash" id="kUO-hm-mM9">
+                            <connections>
+                                <action selector="pressListBarButton:" destination="BYZ-38-t0r" id="20C-GR-Dmp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="gearshape" id="PhN-SP-jsX">
+                            <connections>
+                                <action selector="pressSettingBarButton:" destination="BYZ-38-t0r" id="C5I-5J-OKj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="guideLabel" destination="8bW-fm-1w2" id="Ebq-03-SOH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903.07692307692309" y="69.66824644549763"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="1CK-pC-mOE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uN2-3b-Tgc" customClass="MainNavigationController" customModule="iOSQuestionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NBK-eW-dAo">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WaL-3a-OhG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWq-II-yRf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.153846153846153" y="69.66824644549763"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape" width="20.898399353027344" height="20.888700485229492"/>
+        <image name="list_dash" width="19.677700042724609" height="13.759799957275391"/>
+        <image name="swiftLogo" width="1028" height="948"/>
+        <namedColor name="main">
+            <color red="0.10199999809265137" green="0.10599999874830246" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
