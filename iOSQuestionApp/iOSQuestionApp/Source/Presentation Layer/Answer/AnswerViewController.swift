@@ -9,14 +9,32 @@ import UIKit
 
 class AnswerViewController: BaseViewController {
     
+    var viewModel: AnswerViewModel!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear.send(Void())
+    }
+    
     override func setupAttribute() {
         super.setupAttribute()
         self.navigationItem.title = "질문"
+        
+        questionLabel.text = viewModel.question.content
         
         collectionView.backgroundColor = Pallete.main.color
         collectionView.registerWithNib(AnswerCollectionViewCell.self)
         
         iqButton.setupTitle("한번 더 답변하러 가기")
+        iqButton.addTarget(self, action: #selector(pressIQButton), for: .touchUpInside)
+    }
+    
+    override func bind() {
+        viewModel.collectionViewReload
+            .sink { [weak self] _ in
+                self?.collectionView.reloadData()
+            }
+            .store(in: &cancelBag)
     }
     
     override func setupLayout() {
@@ -32,10 +50,23 @@ class AnswerViewController: BaseViewController {
         
         view.addSubview(iqButton)
         NSLayoutConstraint.activate([
-            iqButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 33),
+//            iqButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 33),
+            iqButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
             iqButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             iqButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 29),
         ])
+    }
+    
+    @objc private func pressIQButton() {
+        let viewControllerName = String(describing: WritingViewController.self)
+        let storyboard = UIStoryboard(name: viewControllerName, bundle: nil)
+        guard let writingViewController = storyboard.instantiateViewController(withIdentifier: viewControllerName) as? WritingViewController else {
+            fatalError()
+        }
+        print(viewModel.question)
+        writingViewController.viewModel = WritingViewModel(viewModel.question, RandomQuestionUseCase(QuestionRepository()), WriteAnswerUseCase(AnswerRepository(), QuestionRepository()))
+        writingViewController.modalPresentationStyle = .fullScreen
+        self.present(writingViewController, animated: true)
     }
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -67,13 +98,15 @@ class AnswerViewController: BaseViewController {
 // MARK: UICollectionViewDataSource
 extension AnswerViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 15
+        return viewModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(AnswerCollectionViewCell.self, for: indexPath) else {
             fatalError()
         }
+        let model = viewModel.getAnswerCellViewModel(to: indexPath)
+        cell.configure(with: model)
         return cell
     }
 }
@@ -85,7 +118,7 @@ extension AnswerViewController: UICollectionViewDelegate {
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let inset: CGFloat = (DeviceInfo.width - Constant.answerCellWidth)
         let width: CGFloat = DeviceInfo.width - inset
-
+        
         let cellWidthIncludingSpacing = width + Constant.minItemSpacing
         
         var offset = targetContentOffset.pointee
@@ -97,7 +130,7 @@ extension AnswerViewController: UICollectionViewDelegate {
         } else {
             roundedIndex = ceil(index)
         }
-
+        
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.pointee = offset
     }

@@ -9,6 +9,13 @@ import UIKit
 
 final class HomeViewController: BaseViewController {
     
+    let viewModel = HomeViewModel(AnswerNumberUseCase(QuestionRepository()))
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear.send(Void())
+    }
+    
     override func setupLayout() {
         super.setupLayout()
         
@@ -39,8 +46,8 @@ final class HomeViewController: BaseViewController {
         ])
         view.addSubview(iqButton)
         NSLayoutConstraint.activate([
-            iqButton.topAnchor.constraint(equalTo: questionContainerView.bottomAnchor, constant: 33),
-            //            iqButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -33),
+//            iqButton.topAnchor.constraint(equalTo: questionContainerView.bottomAnchor, constant: 33),
+            iqButton.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
             iqButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
             iqButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 29),
         ])
@@ -49,12 +56,14 @@ final class HomeViewController: BaseViewController {
     override func setupAttribute() {
         super.setupAttribute()
         
+        guideLabel.setupLineSpacing(4, alignment: .center)
+        
         questionContainerView.backgroundColor = Pallete.point.color
         questionContainerView.makeCorenerRadius(Constant.cornerRadius)
         
         questionGuideLabel.text = "답변한 질문 개수"
         questionGuideLabel.textColor = Pallete.white.color
-        questionGuideLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        questionGuideLabel.font = UIFont.boldSystemFont(ofSize: 17)
         
         questionView.backgroundColor = Pallete.red.color
         questionView.makeCorenerRadius(Constant.cornerRadius)
@@ -68,12 +77,25 @@ final class HomeViewController: BaseViewController {
         iqButton.addTarget(self, action: #selector(pressIQButton), for: .touchUpInside)
     }
     
+    override func bind() {
+        super.bind()
+        
+        viewModel.answerNumber
+            .sink { [weak self] in
+                self?.questionCountLabel.text = "\($0)"
+            }
+            .store(in: &cancelBag)
+        
+    }
+    
+    
     @IBAction func pressListBarButton(_ sender: Any) {
         let viewControllerName = String(describing: ListViewController.self)
         let storyboard = UIStoryboard(name: viewControllerName, bundle: nil)
         guard let listViewController = storyboard.instantiateViewController(withIdentifier: viewControllerName) as? ListViewController else {
             fatalError()
         }
+        listViewController.viewModel = ListViewModel(QuestionStatisticUseCase(QuestionRepository()), QuestionListUseCase(QuestionRepository(), AnswerRepository()), AnswerNumberUseCase(QuestionRepository()))
         self.navigationController?.pushViewController(listViewController, animated: true)
     }
     
@@ -83,6 +105,7 @@ final class HomeViewController: BaseViewController {
         guard let settingViewController = storyboard.instantiateViewController(withIdentifier: viewControllerName) as? SettingViewController else {
             fatalError()
         }
+        settingViewController.viewModel = SettingViewModel()
         self.navigationController?.pushViewController(settingViewController, animated: true)
     }
     
@@ -174,6 +197,7 @@ extension HomeViewController: ShakePopupDelegate {
         guard let writingViewController = storyboard.instantiateViewController(withIdentifier: viewControllerName) as? WritingViewController else {
             fatalError()
         }
+        writingViewController.viewModel = WritingViewModel(nil, RandomQuestionUseCase(QuestionRepository()), WriteAnswerUseCase(AnswerRepository(), QuestionRepository()))
         writingViewController.modalPresentationStyle = .fullScreen
         self.present(writingViewController, animated: true)
     }

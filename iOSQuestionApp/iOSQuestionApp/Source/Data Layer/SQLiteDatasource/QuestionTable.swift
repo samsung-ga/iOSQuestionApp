@@ -79,14 +79,12 @@ class QuestionTable: QuestionTableProtocol {
             print(DatabaseError.databaseConnectionError.description)
             return nil
         }
-        
         do {
-            try database.run(table.insert(id <- question.id,
-                                          content <- question.content,
-                                          isAnswered <- question.isAnswered))
+            try database.run(table.insert(content <- question.content,
+                                          isAnswered <- question.isAnswered,
+                                          category <- question.category.rawValue))
             return true
         } catch let error {
-            // TODO: primary key 가 중복되서 나는 오류 따로 처리해주기
             print(error)
             return false
         }
@@ -101,7 +99,7 @@ class QuestionTable: QuestionTableProtocol {
         let questionTarget = table.filter(id == question.id).limit(1)
         
         do {
-            if try database.run(questionTarget.update(content <- question.content)) > 0 {
+            if try database.run(questionTarget.update(isAnswered <- question.isAnswered)) > 0 {
                 print("update success")
                 return true
             } else {

@@ -7,6 +7,9 @@
 
 import UIKit
 
+struct AnswerCellViewModel {
+    let answer: Answer
+}
 class AnswerCollectionViewCell: BaseCollectionViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
@@ -19,4 +22,8 @@ class AnswerCollectionViewCell: BaseCollectionViewCell {
         contentLabel.setupLineSpacing(4)
     }
     
+    func configure(with viewModel: AnswerCellViewModel) {
+        dateLabel.text = viewModel.answer.date
+        contentLabel.text = viewModel.answer.content
+    }
 }

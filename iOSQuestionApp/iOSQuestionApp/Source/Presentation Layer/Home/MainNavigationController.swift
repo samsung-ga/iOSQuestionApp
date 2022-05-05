@@ -9,6 +9,10 @@ import UIKit
 
 class MainNavigationController: UINavigationController {
 
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }

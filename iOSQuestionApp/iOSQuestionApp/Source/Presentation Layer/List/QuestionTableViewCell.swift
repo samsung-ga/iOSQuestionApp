@@ -8,10 +8,9 @@
 import UIKit
 
 struct QuestionCellViewModel {
+    let question: Question
+    let answerCount: Int
     let answerDate: String
-    let questionContent: String
-    let questionCategory: QuestionCategory
-    let answerCount: String
 }
 
 class QuestionTableViewCell: BaseTableViewCell {
@@ -35,8 +34,8 @@ class QuestionTableViewCell: BaseTableViewCell {
     
     func configure(with viewModel: QuestionCellViewModel) {
         dateLabel.text = viewModel.answerDate
-        questionLabel.text = viewModel.questionContent
-        categoryLabel.text = viewModel.questionCategory.rawValue
+        questionLabel.text = viewModel.question.content
+        categoryLabel.text = viewModel.question.category.rawValue
         answerCountLabel.text = "\(viewModel.answerCount)"
     }
 }

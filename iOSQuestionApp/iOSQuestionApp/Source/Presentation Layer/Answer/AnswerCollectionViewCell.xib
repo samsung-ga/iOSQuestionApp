@@ -18,31 +18,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27일 수요일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eZ-qA-fiW">
-                        <rect key="frame" x="32" y="29" width="50.5" height="12"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                        <rect key="frame" x="32" y="29" width="59" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" name="gray"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-eK-Luj">
-                        <rect key="frame" x="32" y="53" width="258" height="420"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="420" id="zbj-bI-VfA"/>
-                        </constraints>
-                        <mutableString key="text">가장 큰 차이점으로는 클래스는 레퍼런스타입과 스트럭은 값타입이라는 점입니다. 이 뜻은 같은 클래스 인스턴스를 여러 개의 변수에 할당하고 값을 변경하면 모든 변수에 영향을 주지만 스트럭의 경우 새로운 변수에 할당할 때마다 새로운 구조체가 생성이 됩니다. 
-
-다음 차이점으로는 상속이 있습니다….
-
-대충 답변 가장 큰 차이점으로는 클래스는 레퍼런스타입과 스트럭은 값타입이라는 점입니다. 이 뜻은 같은 클래스 인스턴스를 여러 개의 변수에 할당하고 값을 변경하면 모든 변수에 영향을 주지만 스트럭의 경우 새로운 변수에 할당할 때마다 새로운 구조체가 생성이 됩니다. 
-
-다음 차이점으로는 상속이 있습니다….
-
-대충 답변 가장 큰 차이점으로는 클래스는 레퍼런스타입과 스트럭은 값타입이라는 점입니다. 이 뜻은 같은 클래스 인스턴스를 여러 개의 변수에 할당하고 값을 변경하면 모든 변수에 영향을 주지만 스트럭의 경우 새로운 변수에 할당할 때마다 새로운 구조체가 생성이 됩니다. 
-
-다음 차이점으로는 상속이 있습니다….
-
-대충 답변 가장 큰 차이점으로는 클마다 새로운 구조체가 생성이 됩니다. 
-</mutableString>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="sdivnsdvosadvsdioavasd" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORp-eK-Luj">
+                        <rect key="frame" x="32" y="55.5" width="258" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -53,6 +36,7 @@
             <constraints>
                 <constraint firstItem="ORp-eK-Luj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="32" id="0Az-Rp-53U"/>
                 <constraint firstItem="9eZ-qA-fiW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="29" id="7Nf-rC-4FK"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ORp-eK-Luj" secondAttribute="bottom" constant="12" id="9p5-rO-tT1"/>
                 <constraint firstAttribute="trailing" secondItem="ORp-eK-Luj" secondAttribute="trailing" constant="32" id="Kqm-ob-9Pq"/>
                 <constraint firstItem="ORp-eK-Luj" firstAttribute="top" secondItem="9eZ-qA-fiW" secondAttribute="bottom" constant="12" id="dXS-6F-t7M"/>
                 <constraint firstItem="9eZ-qA-fiW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="32" id="tcK-A5-kUW"/>

@@ -8,18 +8,13 @@
 import UIKit
 
 struct StatisticCellModel {
-    let questionCount: Int
-    let swiftCount: Int
-    let iOSCount: Int
-    let swiftUICount: Int
-    let architectureCount: Int
-    let advancedCount: Int
-    let programmingCount: Int
-    
+    let answerCount: Int
+    let counts: [QuestionCategory: Int]
 }
 final class StatisticTableViewCell: BaseTableViewCell {
 
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var answerCountLabel: UILabel!
     @IBOutlet weak var swiftCountLabel: UILabel!
     @IBOutlet weak var iOSCountLabel: UILabel!
     @IBOutlet weak var swiftUICountLabel: UILabel!
@@ -34,11 +29,12 @@ final class StatisticTableViewCell: BaseTableViewCell {
     }
     
     func configure(with cellViewModel: StatisticCellModel) {
-        swiftCountLabel.text = "\(cellViewModel.swiftCount)"
-        iOSCountLabel.text = "\(cellViewModel.iOSCount)"
-        swiftUICountLabel.text = "\(cellViewModel.swiftUICount)"
-        architectureCountLabel.text = "\(cellViewModel.architectureCount)"
-        advancedCountLabel.text = "\(cellViewModel.advancedCount)"
-        programmingCountLabel.text = "\(cellViewModel.programmingCount)"
+        answerCountLabel.text = "총 \(cellViewModel.answerCount)번 답변하셨네요!"
+        swiftCountLabel.text = "\(cellViewModel.counts[.Swift] ?? 0)"
+        iOSCountLabel.text = "\(cellViewModel.counts[.iOS] ?? 0)"
+        swiftUICountLabel.text = "\(cellViewModel.counts[.SwiftUI] ?? 0)"
+        architectureCountLabel.text = "\(cellViewModel.counts[.Architecture] ?? 0)"
+        advancedCountLabel.text = "\(cellViewModel.counts[.Advanced] ?? 0)"
+        programmingCountLabel.text = "\(cellViewModel.counts[.Programming] ?? 0)"
     }
 }

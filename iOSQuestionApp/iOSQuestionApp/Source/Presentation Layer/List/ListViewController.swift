@@ -11,6 +11,11 @@ final class ListViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     var viewModel: ListViewModel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.viewWillAppear.send(Void())
+    }
+    
     override func setupAttribute() {
         super.setupAttribute()
         
@@ -20,12 +25,20 @@ final class ListViewController: BaseViewController {
         tableView.registerWithNib(StatisticTableViewCell.self)
         tableView.registerWithNib(QuestionTableViewCell.self)
     }
+    
+    override func bind() {
+        viewModel.tableViewReload
+            .sink { [weak self] _ in
+                self?.tableView.reloadData()
+            }
+        .store(in: &cancelBag)
+    }
 }
 
 extension ListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return viewModel.count
     }
     
     func tableView(_ tableView: UITableView,
@@ -44,7 +57,8 @@ extension ListViewController: UITableViewDataSource {
                                                        for: indexPath) else {
             fatalError()
         }
-        
+        guard let model = viewModel.statistics else { return cell }
+        cell.configure(with: model)
         return cell
     }
     
@@ -53,7 +67,8 @@ extension ListViewController: UITableViewDataSource {
                                                        for: indexPath) else {
             fatalError()
         }
-
+        let model = viewModel.getQuestionListModel(to: indexPath)
+        cell.configure(with: model)
         return cell
     }
 }
@@ -66,6 +81,8 @@ extension ListViewController: UITableViewDelegate {
             guard let answerViewController = storyboard.instantiateViewController(withIdentifier: viewControllerName) as? AnswerViewController else {
                 fatalError()
             }
+            let questionModel = viewModel.getQuestionListModel(to: indexPath)
+            answerViewController.viewModel = AnswerViewModel(questionModel.question, AnswerListUseCase(AnswerRepository()))
             self.navigationController?.pushViewController(answerViewController, animated: true)
         }
     }

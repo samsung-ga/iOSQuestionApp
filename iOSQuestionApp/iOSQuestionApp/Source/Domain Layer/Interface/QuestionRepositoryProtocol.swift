@@ -10,4 +10,6 @@ import Foundation
 protocol QuestionRepositoryProtocol {
     func getRandomQuestion() -> Question?
     func getQuestionsAnswered() -> [Question]
+    func updateQuestion(_ question: Question)
+    func insertQuestions(_ questions: [Question])
 }

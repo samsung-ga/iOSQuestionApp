@@ -25,7 +25,7 @@ class ShakePopupViewController: BaseViewController {
         containerView.makeCorenerRadius(26)
         containerView.makeBorderLayer(Pallete.white.color, 1)
         
-        guideLabel.setupLineSpacing(10)
+        guideLabel.setupLineSpacing(10, alignment: .center)
     }
     
     @IBAction func pressBackButton(_ sender: Any) {

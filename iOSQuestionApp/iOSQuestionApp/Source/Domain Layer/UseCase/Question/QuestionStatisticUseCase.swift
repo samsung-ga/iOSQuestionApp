@@ -26,7 +26,7 @@ extension QuestionStatisticUseCase {
         let questionsAnswered = questionRepository.getQuestionsAnswered()
         var dictionary:[QuestionCategory: Int] = [:]
         questionsAnswered.forEach {
-            let count: Int = dictionary[$0.category]!
+            let count: Int = dictionary[$0.category] ?? 0
             dictionary[$0.category] = count + 1
         }
         questionCategory.send(dictionary)

@@ -32,7 +32,7 @@ extension IQButton {
 
 extension IQButton {
     private func setupAttribute() {
-        self.titleLabel?.font = .boldSystemFont(ofSize: 15)
+        self.titleLabel?.font = .boldSystemFont(ofSize: 17)
         self.backgroundColor = Pallete.blue.color
         self.layer.cornerRadius = 26
         self.setTitleColor(Pallete.white.color, for: .normal)

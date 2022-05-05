@@ -10,7 +10,7 @@ import UIKit
 class SettingViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var settings: [String] = ["오픈 소스 라이브러리", "질문 출처"]
+    var viewModel: SettingViewModel!
     
     override func setupAttribute() {
         super.setupAttribute()
@@ -20,7 +20,7 @@ class SettingViewController: BaseViewController {
 
 extension SettingViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settings.count
+        return viewModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -28,7 +28,8 @@ extension SettingViewController: UITableViewDataSource {
                                                        for: indexPath) else {
             fatalError()
         }
-        cell.configure(item: settings[indexPath.row])
+        let model = viewModel.settingTitleString(at: indexPath)
+        cell.configure(item: model)
         return cell
     }
 }

@@ -21,8 +21,7 @@ class SQLiteDatabase {
                                                                 create: true)
             
             let fileURL = documentDirectory
-                .appendingPathExtension("iOSQuestion")
-                .appendingPathExtension("sqlite")
+                .appendingPathComponent("my_users.sqlite3")
 
             database = try Connection(fileURL.path)
         } catch  {

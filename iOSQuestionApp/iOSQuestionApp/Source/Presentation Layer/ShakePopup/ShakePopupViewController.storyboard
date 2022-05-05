@@ -38,10 +38,10 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S81-yH-j5H">
-                                        <rect key="frame" x="54.5" y="273" width="162" height="29"/>
+                                        <rect key="frame" x="22" y="261" width="227.5" height="41"/>
                                         <string key="text">핸드폰을 한 번 세게 흔들어주세요!
 랜덤 질문이 하나 뽑혀요~</string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>

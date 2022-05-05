@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Combine
 
 class BaseViewController: UIViewController, CodeBasedView {
+    
+    var cancelBag = Set<AnyCancellable>()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -18,10 +21,13 @@ class BaseViewController: UIViewController, CodeBasedView {
         
         setupAttribute()
         setupLayout()
+        bind()
     }
     
     func setupAttribute() {
         view.backgroundColor = Pallete.main.color
     }
     func setupLayout() { }
+    
+    func bind() { }
 }
