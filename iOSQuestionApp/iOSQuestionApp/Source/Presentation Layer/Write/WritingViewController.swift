@@ -64,7 +64,6 @@ class WritingViewController: BaseViewController {
                 } else {
                     self?.showEmptyAlertView()
                 }
-                
             }
             .store(in: &cancelBag)
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TodayAnswerRepository: TodayAnsweredRepositoryProtocol {
+final class TodayAnswerRepository: TodayAnswerRepositoryProtocol {
     func isAnsweredToday() -> Bool {
         return UserDefaults.standard.bool(forKey: UserDefaultKeyName.todayAnswered.rawValue)
     }

@@ -11,13 +11,15 @@ import Combine
 final class WriteAnswerUseCase {
     private let answerRepository: AnswerRepositoryProtocol
     private let questionRepository: QuestionRepositoryProtocol
-    
+    private let todayAnswerRepository: TodayAnswerRepositoryProtocol
     let storeAnswerResult = PassthroughSubject<Bool, Never>()
     
     init(_ answerRepository: AnswerRepositoryProtocol,
-         _ questionRepository: QuestionRepositoryProtocol) {
+         _ questionRepository: QuestionRepositoryProtocol,
+         _ todayAnswerRepository: TodayAnswerRepositoryProtocol) {
         self.answerRepository = answerRepository
         self.questionRepository = questionRepository
+        self.todayAnswerRepository = todayAnswerRepository
     }
 }
 
@@ -28,15 +30,13 @@ extension WriteAnswerUseCase {
             storeAnswerResult.send(false)
             return
         }
+        
+        todayAnswerRepository.saveAnsweredToday()
+        
         let question = updateQuestionAnswered(question)
         questionRepository.updateQuestion(question)
         
-        let date = Date(timeIntervalSinceNow: 0).convertDateToString()
-        let answerModel = Answer(id: 0,
-                                 questionID: question.id,
-                                 content: answer,
-                                 date: date)
-        
+        let answerModel = createAnswerModel(question, answer)
         answerRepository.saveAnswer(answerModel) { result in
             storeAnswerResult.send(result)
         }
@@ -48,7 +48,8 @@ extension WriteAnswerUseCase {
         return question
     }
     
-    private func createAnswerModel() {
-        
+    private func createAnswerModel(_ question: Question, _ answer:String) -> Answer {
+        let date = Date(timeIntervalSinceNow: 0).convertDateToString()
+        return Answer(id: 0, questionID: question.id, content: answer, date: date)
     }
 }

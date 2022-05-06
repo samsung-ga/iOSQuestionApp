@@ -10,14 +10,18 @@ import Combine
 
 final class HomeViewModel: BaseViewModel {
     private let answerNumberUseCase: AnswerNumberUseCase
+    private let answerExistenceUseCase: AnswerExistenceUseCase
     
     // input
     let viewWillAppear = PassthroughSubject<Void, Never>()
     // output
     let answerNumber = PassthroughSubject<Int, Never>()
-
-    init(_ answerNumberUseCase: AnswerNumberUseCase) {
+    let homeState = PassthroughSubject<HomeState, Never>()
+    
+    init(_ answerNumberUseCase: AnswerNumberUseCase,
+         _ answerExistenceUseCase: AnswerExistenceUseCase) {
         self.answerNumberUseCase = answerNumberUseCase
+        self.answerExistenceUseCase = answerExistenceUseCase
         super.init()
         transform()
     }
@@ -26,13 +30,21 @@ final class HomeViewModel: BaseViewModel {
         // input
         viewWillAppear.sink { [weak self] _ in
             self?.answerNumberUseCase.requestAnswerNumber()
+            self?.answerExistenceUseCase.requestHomeState()
         }
         .store(in: &cancelBag)
         
         // connect to usecase
-        answerNumberUseCase.answerNumber.sink { [weak self] number in
-            self?.answerNumber.send(number)
-        }
-        .store(in: &cancelBag)
+        answerNumberUseCase.answerNumber
+            .sink { [weak self] number in
+                self?.answerNumber.send(number)
+            }
+            .store(in: &cancelBag)
+        
+        answerExistenceUseCase.homeState
+            .sink { [weak self] state in
+                self?.homeState.send(state)
+            }
+            .store(in: &cancelBag)
     }
 }

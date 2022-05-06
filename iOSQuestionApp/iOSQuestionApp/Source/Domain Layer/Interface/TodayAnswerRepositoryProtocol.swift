@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol TodayAnsweredRepositoryProtocol {
+protocol TodayAnswerRepositoryProtocol {
     func isAnsweredToday() -> Bool
     func saveAnsweredToday()
     func resetAnswredToday()

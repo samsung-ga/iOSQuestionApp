@@ -9,7 +9,7 @@ import Foundation
 
 class SettingViewModel {
     
-    private let settings: [String] = ["오픈 소스 라이브러리", "질문 출처"]
+    private let settings: [String] = ["오픈 소스 라이브러리", "질문 출처", "스위프트 로고 출처 : Mash-Up 💙"]
     
     var count: Int {
         return settings.count

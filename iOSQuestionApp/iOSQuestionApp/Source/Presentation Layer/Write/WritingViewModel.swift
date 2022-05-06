@@ -59,7 +59,6 @@ final class WritingViewModel: BaseViewModel {
         // connect to UseCase
         randomQuestionUseCase.randomQuestion
             .sink { [weak self] in
-                print($0)
                 self?.question = $0
                 self?.questionContent.send($0.content)
             }

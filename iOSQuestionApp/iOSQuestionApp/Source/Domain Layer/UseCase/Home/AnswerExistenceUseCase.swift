@@ -14,11 +14,11 @@ enum HomeState {
 }
 
 final class AnswerExistenceUseCase {
-    private let todayAnsweredRepository: TodayAnsweredRepositoryProtocol
+    private let todayAnsweredRepository: TodayAnswerRepositoryProtocol
     
     let homeState = CurrentValueSubject<HomeState, Never>(.notAnswered)
     
-    init(_ todayAnsweredRepository: TodayAnsweredRepositoryProtocol) {
+    init(_ todayAnsweredRepository: TodayAnswerRepositoryProtocol) {
         self.todayAnsweredRepository = todayAnsweredRepository
     }
 }

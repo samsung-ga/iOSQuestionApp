@@ -46,12 +46,12 @@
 		EF8E90D72823F11300CE394F /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90D62823F11300CE394F /* SettingViewModel.swift */; };
 		EF8E90D92823F22900CE394F /* WritingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90D82823F22900CE394F /* WritingViewModel.swift */; };
 		EF8E90DB2823F67300CE394F /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90DA2823F67300CE394F /* Date+.swift */; };
-		EF8E90DD2823F7D500CE394F /* AddQuestionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90DC2823F7D500CE394F /* AddQuestionUseCase.swift */; };
 		EF8E90DF2824056E00CE394F /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90DE2824056E00CE394F /* BaseViewModel.swift */; };
 		EF8E90E1282407F600CE394F /* RandomQuestionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E0282407F600CE394F /* RandomQuestionUseCase.swift */; };
 		EF8E90E528241E0F00CE394F /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E428241E0F00CE394F /* String+.swift */; };
 		EF8E90E72824348600CE394F /* AnswerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E62824348600CE394F /* AnswerViewModel.swift */; };
 		EF8E90E9282434DF00CE394F /* AnswerListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8E90E8282434DF00CE394F /* AnswerListUseCase.swift */; };
+		EF9F71F928245ABC002A3F88 /* SwiftScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9F71F828245ABC002A3F88 /* SwiftScene.swift */; };
 		EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */; };
 		EFB2A077281F816100F4844C /* QuestionStatisticUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */; };
 		EFB2A079281F81C000F4844C /* AnswerNumberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */; };
@@ -61,7 +61,7 @@
 		EFB2A08C281F852C00F4844C /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A08B281F852C00F4844C /* Answer.swift */; };
 		EFB2A093281FB30D00F4844C /* AnswerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A092281FB30D00F4844C /* AnswerRepositoryProtocol.swift */; };
 		EFB2A095281FB31600F4844C /* QuestionRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A094281FB31600F4844C /* QuestionRepositoryProtocol.swift */; };
-		EFB2A097281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A096281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift */; };
+		EFB2A097281FF21200F4844C /* TodayAnswerRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB2A096281FF21200F4844C /* TodayAnswerRepositoryProtocol.swift */; };
 		EFBEFD632820A6A100E114D8 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = EFBEFD622820A6A100E114D8 /* SQLite */; };
 		EFBEFD652820A6B400E114D8 /* SQLiteDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEFD642820A6B400E114D8 /* SQLiteDatabase.swift */; };
 		EFBEFD682820AB3700E114D8 /* QuestionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFBEFD672820AB3700E114D8 /* QuestionTable.swift */; };
@@ -119,12 +119,12 @@
 		EF8E90D62823F11300CE394F /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		EF8E90D82823F22900CE394F /* WritingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewModel.swift; sourceTree = "<group>"; };
 		EF8E90DA2823F67300CE394F /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		EF8E90DC2823F7D500CE394F /* AddQuestionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionUseCase.swift; sourceTree = "<group>"; };
 		EF8E90DE2824056E00CE394F /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		EF8E90E0282407F600CE394F /* RandomQuestionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestionUseCase.swift; sourceTree = "<group>"; };
 		EF8E90E428241E0F00CE394F /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		EF8E90E62824348600CE394F /* AnswerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewModel.swift; sourceTree = "<group>"; };
 		EF8E90E8282434DF00CE394F /* AnswerListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerListUseCase.swift; sourceTree = "<group>"; };
+		EF9F71F828245ABC002A3F88 /* SwiftScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftScene.swift; sourceTree = "<group>"; };
 		EFB2A074281F813A00F4844C /* AnswerExistenceUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerExistenceUseCase.swift; sourceTree = "<group>"; };
 		EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionStatisticUseCase.swift; sourceTree = "<group>"; };
 		EFB2A078281F81C000F4844C /* AnswerNumberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerNumberUseCase.swift; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 		EFB2A08B281F852C00F4844C /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		EFB2A092281FB30D00F4844C /* AnswerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRepositoryProtocol.swift; sourceTree = "<group>"; };
 		EFB2A094281FB31600F4844C /* QuestionRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionRepositoryProtocol.swift; sourceTree = "<group>"; };
-		EFB2A096281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAnsweredRepositoryProtocol.swift; sourceTree = "<group>"; };
+		EFB2A096281FF21200F4844C /* TodayAnswerRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAnswerRepositoryProtocol.swift; sourceTree = "<group>"; };
 		EFBEFD642820A6B400E114D8 /* SQLiteDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteDatabase.swift; sourceTree = "<group>"; };
 		EFBEFD672820AB3700E114D8 /* QuestionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTable.swift; sourceTree = "<group>"; };
 		EFBEFD692820B55300E114D8 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
@@ -190,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				EF8E90D42823EF6800CE394F /* HomeViewModel.swift */,
+				EF9F71F828245ABC002A3F88 /* SwiftScene.swift */,
 				EFD70272281BAFAB004EBA53 /* HomeViewController.swift */,
 				EF8E90A62823988800CE394F /* MainNavigationController.swift */,
 				EFD70274281BAFAB004EBA53 /* Main.storyboard */,
@@ -274,6 +275,7 @@
 				EFB2A071281F810500F4844C /* Domain Layer */,
 				EFD70286281BB370004EBA53 /* Presentation Layer */,
 				EFB2A072281F811900F4844C /* Data Layer */,
+				EFBEFD5E2820A5FE00E114D8 /* SQLiteDatasource */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -292,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				EFBEFD712820BF2600E114D8 /* Repository */,
-				EFBEFD5E2820A5FE00E114D8 /* SQLiteDatasource */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -329,7 +330,6 @@
 			children = (
 				EFB2A076281F816100F4844C /* QuestionStatisticUseCase.swift */,
 				EFB2A07D281F820A00F4844C /* QuestionListUseCase.swift */,
-				EF8E90DC2823F7D500CE394F /* AddQuestionUseCase.swift */,
 				EF8E90E0282407F600CE394F /* RandomQuestionUseCase.swift */,
 			);
 			path = Question;
@@ -349,7 +349,7 @@
 			children = (
 				EFB2A092281FB30D00F4844C /* AnswerRepositoryProtocol.swift */,
 				EFB2A094281FB31600F4844C /* QuestionRepositoryProtocol.swift */,
-				EFB2A096281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift */,
+				EFB2A096281FF21200F4844C /* TodayAnswerRepositoryProtocol.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -545,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8E90BA2823A39B00CE394F /* AnswerCollectionViewCell.swift in Sources */,
+				EF9F71F928245ABC002A3F88 /* SwiftScene.swift in Sources */,
 				EF8E90D92823F22900CE394F /* WritingViewModel.swift in Sources */,
 				EF8E90A2282389A500CE394F /* QuestionTableViewCell.swift in Sources */,
 				EF8E90C92823CD5500CE394F /* TestViewController.swift in Sources */,
@@ -556,7 +557,7 @@
 				EFBEFD732820BFBF00E114D8 /* TodayAnswerRepository.swift in Sources */,
 				EF8E909D2823802300CE394F /* UITableView+.swift in Sources */,
 				EF8E90C02823A6DD00CE394F /* DeviceInfo.swift in Sources */,
-				EFB2A097281FF21200F4844C /* TodayAnsweredRepositoryProtocol.swift in Sources */,
+				EFB2A097281FF21200F4844C /* TodayAnswerRepositoryProtocol.swift in Sources */,
 				EFBEFD7A2820C6D700E114D8 /* QuestionRepository.swift in Sources */,
 				EF8E90DB2823F67300CE394F /* Date+.swift in Sources */,
 				EF71BE3F281BDCEA001AA251 /* ImageAsset.swift in Sources */,
@@ -571,7 +572,6 @@
 				EFBEFD6A2820B55300E114D8 /* DatabaseError.swift in Sources */,
 				EF8E90A52823962400CE394F /* ListViewModel.swift in Sources */,
 				EFBEFD652820A6B400E114D8 /* SQLiteDatabase.swift in Sources */,
-				EF8E90DD2823F7D500CE394F /* AddQuestionUseCase.swift in Sources */,
 				EF8E909F282388C700CE394F /* BaseTableViewCell.swift in Sources */,
 				EFB2A075281F813A00F4844C /* AnswerExistenceUseCase.swift in Sources */,
 				EFB2A08C281F852C00F4844C /* Answer.swift in Sources */,

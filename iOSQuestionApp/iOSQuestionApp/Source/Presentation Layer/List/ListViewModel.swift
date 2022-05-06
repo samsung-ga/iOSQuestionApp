@@ -40,8 +40,6 @@ final class ListViewModel: BaseViewModel {
         }
         .store(in: &cancelBag)
         
-        // TODO: 이 두개는 합쳐야함.. 뭘쓰지... 컴바인에서 어디를 찾아봐야하지
-        // 이거 맞나?
         questionStatisticUseCase.questionCategory
             .combineLatest(answerNumberUseCase.answerNumber)
             .map { StatisticCellModel(answerCount: $0.1, counts: $0.0) }

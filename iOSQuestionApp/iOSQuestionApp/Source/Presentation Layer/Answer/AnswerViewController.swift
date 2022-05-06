@@ -63,8 +63,7 @@ class AnswerViewController: BaseViewController {
         guard let writingViewController = storyboard.instantiateViewController(withIdentifier: viewControllerName) as? WritingViewController else {
             fatalError()
         }
-        print(viewModel.question)
-        writingViewController.viewModel = WritingViewModel(viewModel.question, RandomQuestionUseCase(QuestionRepository()), WriteAnswerUseCase(AnswerRepository(), QuestionRepository()))
+        writingViewController.viewModel = WritingViewModel(viewModel.question, RandomQuestionUseCase(QuestionRepository()), WriteAnswerUseCase(AnswerRepository(), QuestionRepository(), TodayAnswerRepository()))
         writingViewController.modalPresentationStyle = .fullScreen
         self.present(writingViewController, animated: true)
     }

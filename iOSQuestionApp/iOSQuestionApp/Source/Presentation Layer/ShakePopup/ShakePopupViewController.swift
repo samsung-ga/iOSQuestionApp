@@ -47,6 +47,7 @@ extension ShakePopupViewController {
             generator.impactOccurred()
             
             delegate?.dismissPopup()
+            
             self.dismiss(animated: false) { [weak self] in
                 self?.delegate?.presentWritingViewController()
             }
