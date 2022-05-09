@@ -77,6 +77,7 @@
 		EFD70276281BAFAB004EBA53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD70274281BAFAB004EBA53 /* Main.storyboard */; };
 		EFD70278281BAFAE004EBA53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFD70277281BAFAE004EBA53 /* Assets.xcassets */; };
 		EFD7027B281BAFAE004EBA53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFD70279281BAFAE004EBA53 /* LaunchScreen.storyboard */; };
+		EFE4A1E52828F39E001118A4 /* QuestionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4A1E42828F39E001118A4 /* QuestionInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -151,6 +152,7 @@
 		EFD70277281BAFAE004EBA53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFD7027A281BAFAE004EBA53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFD7027C281BAFAE004EBA53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFE4A1E42828F39E001118A4 /* QuestionInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +361,7 @@
 			children = (
 				EFB2A089281F842E00F4844C /* Question.swift */,
 				EFB2A08B281F852C00F4844C /* Answer.swift */,
+				EFE4A1E42828F39E001118A4 /* QuestionInfo.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				EF8E90CB2823CE6900CE394F /* UILabel+.swift in Sources */,
 				EFB2A095281FB31600F4844C /* QuestionRepositoryProtocol.swift in Sources */,
 				EF8E90BD2823A3BD00CE394F /* UICollectionView+.swift in Sources */,
+				EFE4A1E52828F39E001118A4 /* QuestionInfo.swift in Sources */,
 				EFBEFD782820C6CD00E114D8 /* AnswerRepository.swift in Sources */,
 				EF8E90A72823988800CE394F /* MainNavigationController.swift in Sources */,
 				EF1434412822543800E8A11F /* CodeBasedView.swift in Sources */,
@@ -756,6 +760,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -785,6 +790,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

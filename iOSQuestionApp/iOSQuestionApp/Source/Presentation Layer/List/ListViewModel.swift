@@ -51,34 +51,21 @@ final class ListViewModel: BaseViewModel {
         
         // TODO: 리팩토링 필요해요. 물어보기
         // ([A],[B],[C]) -> [D(A,B,C)]
+        // [A] -> [B]
         questionListUseCase.questionList
-            .sink { [weak self] tuple in
-                let questions = tuple.0
-                let answerCounts = tuple.1
-                let dates = tuple.2
-                self?.count = 1 + questions.count
-                
+            .sink { [weak self] infos in
                 var questionInfo: [QuestionCellViewModel] = []
-                questions.enumerated().forEach { (index, question) in
-                    let temp = QuestionCellViewModel(question: question,
-                                                     answerCount: answerCounts[index],
-                                                     answerDate: dates[index])
-                    questionInfo.append(temp)
+                infos.forEach {
+                    let question = QuestionCellViewModel(question: $0.question,
+                                                         answerCount: $0.answerCount,
+                                                         answerDate: $0.answerDate)
+                    questionInfo.append(question)
                 }
-                self?.questionList = self?.alignAnswerListByDate(questionInfo) ?? []
+                self?.questionList = questionInfo
+                self?.count = 1 + (self?.questionList.count ?? 0) // MARK: 이거 불편함 테이블뷰 바인딩처리.. 컴바인에서는 어디없나
                 self?.tableViewReload.send(Void())
             }
             .store(in: &cancelBag)
-        
-        
-    }
-    
-    private func alignAnswerListByDate(_ questions: [QuestionCellViewModel]) -> [QuestionCellViewModel] {
-        return questions.sorted { first, second in
-            let firstDate = first.answerDate.convertStringToDate()
-            let secondDate = second.answerDate.convertStringToDate()
-            return firstDate - secondDate > 0
-        }
     }
     
     func getQuestionListModel(to indexPath: IndexPath) -> QuestionCellViewModel {

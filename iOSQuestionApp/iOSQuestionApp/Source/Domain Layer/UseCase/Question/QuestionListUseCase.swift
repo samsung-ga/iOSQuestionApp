@@ -15,8 +15,10 @@ final class QuestionListUseCase {
     typealias DateString = String
     typealias AnswerCount = Int
     typealias QuestionListInformation = ([Question],[AnswerCount],[DateString])
+    typealias QuestionList = [Question]
+    typealias QuestionInfoList = [QuestionInfo]
     
-    let questionList = CurrentValueSubject<QuestionListInformation, Never>(([],[],[]))
+    let questionList = CurrentValueSubject<QuestionInfoList, Never>([])
     
     init(_ questionRepository: QuestionRepositoryProtocol,
          _ answerRepository: AnswerRepositoryProtocol) {
@@ -28,16 +30,22 @@ final class QuestionListUseCase {
 extension QuestionListUseCase {
     
     func requestQuestionListInformation() {
-        var answerCounts = [AnswerCount]()
-        var dateStrings = [DateString]()
         let questions = questionRepository.getQuestionsAnswered()
+        let questionsConverted = convertType(questions)
+        questionList.send(alignAnswerListByDate(questionsConverted))
+    }
+    
+    private func convertType(_ questions: QuestionList) -> QuestionInfoList {
+        var questionInfos = QuestionInfoList()
         questions.forEach {
             let answers = answerRepository.getAnswer(of: $0)
             let newestDate = compareDate(answers)
-            answerCounts.append(answers.count)
-            dateStrings.append(newestDate)
+            let questionInfo = QuestionInfo(question: $0,
+                                    answerCount: answers.count,
+                                    answerDate: newestDate)
+            questionInfos.append(questionInfo)
         }
-        questionList.send((questions, answerCounts, dateStrings))
+        return questionInfos
     }
     
     private func compareDate(_ answers: [Answer]) -> DateString {
@@ -47,5 +55,13 @@ extension QuestionListUseCase {
             newest = max(newest, $0.date.convertStringToDate())
         }
         return newest.convertDateToString()
+    }
+    
+    private func alignAnswerListByDate(_ questions: QuestionInfoList) -> QuestionInfoList {
+        return questions.sorted { first, second in
+            let firstDate = first.answerDate.convertStringToDate()
+            let secondDate = second.answerDate.convertStringToDate()
+            return firstDate - secondDate > 0
+        }
     }
 }
