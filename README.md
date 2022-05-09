@@ -9,10 +9,22 @@
 - 클린 아키텍처 + MVVM을 공부하기 위한 프로젝트 
 - 위키에 클린 아키텍처 개념에 대한 정리 추가 예정
 
+## Skills & Tech Stack
+
+- Clean Architecture + MVVM 
+- SQLite3
+- Combine 
+- Spritekit (미완)
+
+**Library Used**
+
+|                     라이브러리(Library)                      |                     목적(Purpose)                      |
+| :----------------------------------------------------------: | :----------------------------------------------------: |
+| [SQLite](https://github.com/stephencelis/SQLite.swift) (0.13.3) | 로컬 데이터베이스인 SQLite3를 간편하게 사용하기 위하여 |
+
 ## Foldering
 
 [링크](https://github.com/wody-d/iOSQuestionApp/wiki/Foldering)
-
 
 ## Screenshots
 
@@ -27,17 +39,3 @@
 **설정**
 
 <img src="https://user-images.githubusercontent.com/56102421/167379490-595f9896-07ff-437f-8e0a-fe9fad0d7364.png" width="200" /> 
-
-**Library Used**
-
-|                     라이브러리(Library)                      |                     목적(Purpose)                      |
-| :----------------------------------------------------------: | :----------------------------------------------------: |
-| [SQLite](https://github.com/stephencelis/SQLite.swift) (0.13.3) | 로컬 데이터베이스인 SQLite3를 간편하게 사용하기 위하여 |
-
-
-## Skills & Tech Stack
-
-- Clean Architecture + MVVM 
-- SQLite3
-- Combine 
-- Spritekit (미완)
