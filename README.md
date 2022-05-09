@@ -48,7 +48,7 @@ iOSQuestionApp
 
 **랜덤 질문 뽑기 & 답변 작성하기**
 
-<img src="https://user-images.githubusercontent.com/56102421/167376549-97d3fca2-b1da-4133-8315-92d7627ca84e.png" alt="Simulator Screen Shot - iPhone 13 - 2022-05-06 at 11 56 45" style="zoom:20%;" />  <img src="https://user-images.githubusercontent.com/56102421/167378386-5d2bf3d7-49d1-450d-b848-5be169e656c2.png" alt="Simulator Screen Shot - iPhone 13 - 2022-05-06 at 11 56 45" style="zoom:20%;" /> <img src="https://user-images.githubusercontent.com/56102421/167376797-0a1bdc20-46e5-44f8-b9f2-c4d4a0ce83d9.png" alt="Simulator Screen Shot - iPhone 13 - 2022-05-06 at 11 56 45" style="zoom:20%;" />
+<img src="https://user-images.githubusercontent.com/56102421/167376549-97d3fca2-b1da-4133-8315-92d7627ca84e.png" alt="Simulator Screen Shot - iPhone 13 - 2022-05-06 at 11 56 45" width="200" />  <img src="https://user-images.githubusercontent.com/56102421/167378386-5d2bf3d7-49d1-450d-b848-5be169e656c2.png" alt="Simulator Screen Shot - iPhone 13 - 2022-05-06 at 11 56 45" style="zoom:20%;" /> <img src="https://user-images.githubusercontent.com/56102421/167376797-0a1bdc20-46e5-44f8-b9f2-c4d4a0ce83d9.png" alt="Simulator Screen Shot - iPhone 13 - 2022-05-06 at 11 56 45" style="zoom:20%;" />
 
 **답변한 질문 통계 및 질문 목록 보기** 
 
