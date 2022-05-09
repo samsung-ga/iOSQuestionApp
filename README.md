@@ -7,11 +7,11 @@
 > iOS 공부를 하머 생각할 만한 질문, 고민이나 면접 질문들을 작성하며 생각을 정리하고 이전과 얼마나 답변이 달라졌는 지 확인할 수 있는 성장유도 어플리케이션입니다.
 
 - 클린 아키텍처 + MVVM을 공부하기 위한 프로젝트 
-- 위키에 개념에 대한 정리 추가 예정
+- 위키에 클린 아키텍처 개념에 대한 정리 추가 예정
 
 ## Foldering
 
-[링크]()
+[링크](https://github.com/wody-d/iOSQuestionApp/wiki/Foldering)
 
 
 ## Screenshots
