@@ -1,6 +1,6 @@
 # iOS Question App
 
-![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)<img src="https://img.shields.io/badge/iOS-13.0-brightgreen"> <img src="https://img.shields.io/badge/Xcode-13.3-red"> 
+![Swift](https://img.shields.io/badge/Swift-5.0-orange.svg)  <img src="https://img.shields.io/badge/iOS-13.0-brightgreen">  <img src="https://img.shields.io/badge/Xcode-13.3-red"> 
 
 > **프로젝트 기간 :** 4/25 ~ 5/6 (2주)
 > 
