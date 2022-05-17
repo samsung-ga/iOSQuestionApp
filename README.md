@@ -8,6 +8,7 @@
 
 - 클린 아키텍처 + MVVM을 공부하기 위한 프로젝트 
 - 위키에 클린 아키텍처 개념에 대한 정리 추가 예정
+- [프로젝트 설명](https://www.wodyd.com/NC1-project-IQA/)
 
 ## Skills & Tech Stack
 
